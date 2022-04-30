@@ -1,0 +1,50 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+footer
+  width: 100%
+  height: 4rem
+  background-color: #17181b
+  position: relative
+
+  @include mixins.responsivity-max-width-770
+    height: 8rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: static
+
+  .footer-text
+    position: absolute
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-family: variables.$secondary-font
+    font-size: 1rem
+    color: #777
+
+    @include mixins.responsivity-max-width-770
+      position: static
+      align-items: center
+
+  .social-media
+    width: 15%
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: absolute
+    right: 4.5em
+    font-size: 2rem
+
+    @include mixins.responsivity-max-width-770
+      width: 100%
+      position: static
+      align-items: center
+      justify-content: space-evenly
+
+    i
+      color: #77777766

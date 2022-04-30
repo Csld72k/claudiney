@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Calculator Clone</title>
+    <link rel="shortcut icon" href="img/icons8-estimativa-16.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/dfdd3f0741.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <div class="container">
+            <div class="header">
+                <span>Calculator</span>
+                <span>
+                  <input type="checkbox" name="dark-mode" id="dark-mode">
+                  <label for="dark-mode">
+                    <img src="img/moon-16x16.png" alt="Dark mode">
+                    <img src="img/sun-16x16.png" alt="Light mode">
+                  </label>
+                </span>
+            </div>
+            <div class="display">
+                <div class="display-1">
+                    <input type="text" value="+ 25" readonly dir="rtl">
+                </div>
+                <div class="display-2">
+                    <input type="text" value="32" readonly dir="rtl">
+                </div>
+            </div>
+            <div class="keyboard">
+                <button class="btn-color-1" id="%">%</button>
+                <button class="btn-color-1" id="ce">CE</button>
+                <button class="btn-color-1" id="c">C</button>
+                <button class="btn-color-1" id="backspace"></button>
+                <button class="btn-color-1 italic" id="1/x"><span class="not-italic">⅟</span><span class="adjust-size">ₓ</span></button>
+                <button class="btn-color-1 italic" id="x2">x²</button>
+                <button class="btn-color-1 italic" id="2/x">²√x</button>
+                <button class="btn-color-1" id="division">÷</button>
+                <button class="btn-color-2" id="7">7</button>
+                <button class="btn-color-2" id="8">8</button>
+                <button class="btn-color-2" id="9">9</button>
+                <button class="btn-color-1" id="multiplication">×</button>
+                <button class="btn-color-2" id="4">4</button>
+                <button class="btn-color-2" id="5">5</button>
+                <button class="btn-color-2" id="6">6</button>
+                <button class="btn-color-1" id="minus">-</button>
+                <button class="btn-color-2" id="1">1</button>
+                <button class="btn-color-2" id="2">2</button>
+                <button class="btn-color-2" id="3">3</button>
+                <button class="btn-color-1" id="plus">+</button>
+                <button class="btn-color-2" id="plus-minus">⁺⁄₋</button>
+                <button class="btn-color-2" id="0">0</button>
+                <button class="btn-color-2" id="comma">,</button>
+                <button class="btn-color-3" id="equal">=</button>
+                <!-- <button class="btn-color-1" id="%">%</button>
+                <button class="btn-color-1" id="ce">CE</button>
+                <button class="btn-color-1" id="c">C</button>
+                <button class="btn-color-1" id="←">X</button>
+                <button class="btn-color-1 italic" id="1/x">⅟ₓ</button>
+                <button class="btn-color-1 italic" id="x2">x²</button>
+                <button class="btn-color-1 italic" id="2/x">²√x</button>
+                <button class="btn-color-1" id="/"><i class="fa-solid fa-divide"></i></button>
+                <button class="btn-color-2" id="7">7</button>
+                <button class="btn-color-2" id="8">8</button>
+                <button class="btn-color-2" id="9">9</button>
+                <button class="btn-color-1" id="x"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn-color-2" id="4">4</button>
+                <button class="btn-color-2" id="5">5</button>
+                <button class="btn-color-2" id="6">6</button>
+                <button class="btn-color-1" id="-"><i class="fa-solid fa-minus"></i></button>
+                <button class="btn-color-2" id="1">1</button>
+                <button class="btn-color-2" id="2">2</button>
+                <button class="btn-color-2" id="3">3</button>
+                <button class="btn-color-1" id="+"><i class="fa-solid fa-plus"></i></button>
+                <button class="btn-color-2" id="+/-">⁺⁄₋</button>
+                <button class="btn-color-2" id="0">0</button>
+                <button class="btn-color-2" id=",">,</button>
+                <button class="btn-color-3" id="="><i class="fa-solid fa-equals"></i></button> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>

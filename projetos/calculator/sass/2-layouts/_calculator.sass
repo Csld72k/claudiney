@@ -1,0 +1,130 @@
+@use '../1-base/variables'
+
+.calculator
+  width: 100%
+  height: 100vh
+  background-color: variables.$bg-color
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .container
+    width: 20rem
+    height: 31.6rem
+    background-color: variables.$bg-calculator-color
+    box-shadow: 0 0 1px variables.$font-color
+    color: variables.$font-color-3
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: 12px
+
+    .header
+      // background-color: aqua
+      padding: .5rem .7rem
+      display: flex
+      justify-content: space-between
+
+    .display
+      // background-color: red
+      height: 10rem
+      padding: 0 15px
+      position: relative
+
+      .display-1
+        width: 320px
+        position: absolute
+        top: 35px
+
+        input
+          width: 290px
+          height: 20px
+          background-color: transparent
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          color: variables.$font-color-2
+          font-size: 15px
+          cursor: auto
+
+          &::selection
+            background-color: transparent
+
+      .display-2
+        width: 320px
+        position: absolute
+        bottom: 45px
+
+        input
+          width: 290px
+          height: 50px
+          background-color: transparent
+          padding: 10px 0
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+          color: variables.$font-color
+          font-size: 45px
+          font-weight: 600
+
+          &::selection
+            background-color: red
+            // color: red
+
+    .keyboard
+      padding: 2px 3px
+      // background-color: blue
+      display: grid
+      // grid-template-columns: repeat(4, 1fr)
+      grid-template-areas: '1fr 1fr 1fr 1fr'
+
+      button
+        margin: 1px
+        // padding: 14.5px 10px
+        width: 75px
+        height: 49px
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-size: 15px
+        color: variables.$font-color
+
+        i
+          font-size: 15px
+
+        &:hover
+          background-color: variables.$hover-effect
+
+      #multiplication, #minus, #plus, #equal
+        font-size: 30px
+        font-weight: 100
+
+      #division
+        font-size: 27px
+        font-weight: 100
+
+      #backspace
+        font-size: 18px
+        font-weight: 100
+        background-image: url('../img/backspace-dark-mode-32x32.png')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: 15px
+
+      button.italic
+        font-family: 'Informal Roman'
+        font-style: italic
+        font-size: 16px
+
+      button .not-italic
+        // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-size: 18px
+        font-style: normal
+
+      button .adjust-size
+        font-size: 25px
+
+      .btn-color-1
+        background-color: variables.$operator-bg-color
+
+      .btn-color-2
+        background-color: variables.$numpad-bg-color
+        font-weight: 500
+
+      .btn-color-3
+        background-color: variables.$btn-equal-color
+
+        &:hover
+          background-color: variables.$btn-equal-color-hover

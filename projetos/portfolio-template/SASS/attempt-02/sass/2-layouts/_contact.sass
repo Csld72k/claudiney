@@ -1,0 +1,111 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#contact
+  width: 100%
+  background-color: #272727
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .container
+    width: 60rem
+    height: 30rem
+    margin: 14.6rem auto
+    display: flex
+    box-shadow: 5px 5px 50px #000000
+
+    @include mixins.responsivity-max-width-770
+      margin: 14.6rem 2rem
+      // box-shadow: none
+      // justify-content: center
+      // align-items: center
+
+    .background
+      width: 34%
+      height: 100%
+      background: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0, 0, 0, .4)), url("../img/contato.jpg")
+      background-size: cover
+      background-position: center
+
+      @include mixins.responsivity-max-width-770
+        display: none
+
+    .form
+      width: 66%
+      height: 100%
+      background-color: #fff
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+      @include mixins.responsivity-max-width-770
+        width: 100%
+
+      h1
+        font-family: variables.$primary-font
+        font-size: 4rem
+        font-weight: 500
+
+      form
+        width: 70%
+        height: 80%
+
+      .input-wrapper
+        position: relative
+
+        input, textarea
+          width: 100%
+          margin-bottom: 2rem
+          outline: none
+          border-bottom: 2px dashed #777
+          font-family: variables.$secondary-font
+          color: #777
+          font-size: 1rem
+          font-weight: bold
+          padding: 1rem .2rem
+
+          &:-webkit-autofill
+            -webkit-text-fill-color: #777
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset
+            -webkit-font-family: variables.$secondary-font
+            color: #777
+            font-size: 1rem
+            font-weight: bold
+
+          &:-webkit-autofill ~ label
+            top: -1rem
+            color: black
+
+          &:-webkit-autofill ~ label[for="mesage"]
+            top: -1.5rem
+            color: black
+
+        textarea
+          max-width: 100%
+          max-height: 6rem
+          min-width: 100%
+          min-height: 6rem
+          margin-bottom: 0
+
+        label[for="name"], label[for="email"], label[for="mesage"]
+          position: absolute
+          top: 1rem
+          left: 0.2rem
+          font-family: variables.$secondary-font
+          color: #777
+          font-size: 1rem
+          font-weight: bold
+          transition: .2s
+
+        label.content
+          top: -1rem
+          color: black
+
+        label.content2
+          top: -1.5rem
+          color: black
+
+      button
+        width: 100%

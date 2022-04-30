@@ -1,0 +1,145 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+main
+  width: 100%
+  display: flex
+
+  .container
+    width: 49%
+    margin: 6rem auto 4rem
+    display: flex
+    position: relative
+
+    .image-container
+      width: 50%
+
+      img
+        width: 100%
+        position: relative
+        right: -2.5rem
+        top: .1rem
+
+    .slide
+      position: absolute
+
+      img
+        position: absolute
+        top: 31px
+        left: 199px
+        opacity: 0
+        transition: opacity 3s
+
+      img.selected
+        opacity: 1
+
+    .account-container
+      width: 44%
+
+      .login-container
+        margin: 1rem 2rem
+        background-color: white
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        outline: 1px solid variables.$border-color
+
+        img
+          width: 11rem
+          margin-top: 2.5rem
+
+        form
+          width: 76%
+          margin-top: 2.3rem
+          display: flex
+          flex-direction: column
+
+          input
+            width: 100%
+            height: 2.2rem
+            border-radius: 2px
+            padding: .5rem
+            font-size: 11px
+            letter-spacing: .2px
+            font-weight: lighter
+            background-color: variables.$primary-color
+            margin-bottom: .5rem
+            outline: 1px solid variables.$border-color
+
+          input[type="submit"]
+            background-color: variables.$login-off
+            margin-top: .6rem
+            height: 1.8rem
+            border-radius: 2px
+            color: white
+            font-weight: bold
+            font-size: .8rem
+
+        .line
+          width: 76%
+          margin-top: 1rem
+          border-top: 1px solid variables.$border-color
+          display: flex
+          justify-content: center
+          position: relative
+
+          span
+            background-color: white
+            font-size: 12px
+            font-weight: bold
+            padding: 0 1rem
+            color: variables.$footer-text
+            position: absolute
+            top: -.5rem
+
+        .login-with-facebook
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+
+          a
+            font-size: .7rem
+            color: variables.$forgot-password
+            padding-bottom: 1.2rem
+
+          img
+            width: 16px
+
+          span
+            font-size: .9rem
+            color: variables.$login-facebook
+            font-weight: bold
+            padding-bottom: .2rem
+
+      .create-account
+        margin: -.2rem 2rem
+        background-color: white
+        padding: 1.5rem
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-size: 13px
+        letter-spacing: .4px
+        outline: 1px solid variables.$border-color
+
+        a
+          color: variables.$login-on
+
+      .get-app
+        margin: 1.5rem 2rem
+
+        p
+          text-align: center
+          font-size: 14px
+
+        .download-links
+          display: flex
+          justify-content: center
+          align-items: center
+
+          img
+            height: 40px
+            margin: 20px 4px

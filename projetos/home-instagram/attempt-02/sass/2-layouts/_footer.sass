@@ -1,0 +1,56 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+footer
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-size: 12px
+  margin-top: 125px
+  color: variables.$footer-text
+
+  @include mixins.responsivity
+    margin-top: 75px
+    padding: 0 42px
+
+  @include mixins.height-responsivity
+    margin-top: 45px
+
+  a
+    color: variables.$footer-text
+
+  .links-1
+    margin-bottom: 10px
+
+    @include mixins.responsivity
+      text-align: center
+
+    a
+      margin: 0 7px
+
+      @include mixins.responsivity
+        line-height: 25px
+
+  .links-2
+    margin-bottom: 10px
+
+    @include mixins.responsivity
+      text-align: center
+
+    a
+      margin: 0 7px
+
+      @include mixins.responsivity
+        line-height: 25px
+
+  .copyrigh
+    margin-top: 14px
+
+    @include mixins.responsivity
+      margin: 10px 0 50px
+
+    select
+      width: 80px
+      background-color: variables.$primary-color
+      font-size: 12px
+      color: variables.$footer-text

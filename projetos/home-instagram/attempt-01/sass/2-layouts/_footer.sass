@@ -1,0 +1,34 @@
+@use '../1-base/variables'
+
+footer
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  color: variables.$footer-text
+  font-size: 13px
+
+  a, #language
+    color: variables.$footer-text
+    font-size: 13px
+
+  .links-wrapper-1
+    margin: .5rem 0
+    display: flex
+    justify-content: center
+
+    a
+      margin: 0 .6rem
+
+  .links-wrapper-2
+    display: flex
+    justify-content: center
+    a
+      margin: 0 .6rem
+
+  .language-and-copyright
+    margin: 1.5rem 0
+    display: flex
+
+    #language
+      width: 5rem

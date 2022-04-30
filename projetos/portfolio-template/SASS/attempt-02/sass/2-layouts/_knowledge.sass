@@ -1,0 +1,91 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#knowledge
+  @include mixins.section-body
+  @include mixins.section-title
+
+  .container
+    background: url("../img/conhecimentos.png")
+    background-size: 25rem
+    background-repeat: no-repeat
+    background-position: center
+    display: grid
+    grid-template-columns: repeat(16, 1fr)
+    grid-template-rows: repeat(3, 1fr)
+    row-gap: 7rem
+    padding: 7rem 1.5rem
+
+    @include mixins.responsivity-max-width-770
+      background: none
+      display: flex
+      flex-direction: column
+
+    // @include mixins.responsivity-max-height-900
+    // row-gap: 5.4rem
+    // padding: 5.5rem 1.5rem
+
+    // @include mixins.responsivity-max-height-800
+    // row-gap: 3.9rem
+    // padding: 3.9rem 1.5rem
+
+    // @include mixins.responsivity-max-height-700
+    // row-gap: 2.3rem
+    // padding: 2.4rem 1.5rem
+
+    .blocks
+      transition: .2s
+
+      &:nth-child(1)
+        grid-area: 1/3/1/6
+
+      &:nth-child(2)
+        grid-area: 2/2/2/5
+
+      &:nth-child(3)
+        grid-area: 3/3/3/6
+
+      &:nth-child(4)
+        grid-area: 1/12/1/15
+
+      &:nth-child(5)
+        grid-area: 2/13/2/16
+
+      &:nth-child(6)
+        grid-area: 3/12/3/15
+
+      h2
+        font-family: variables.$secondary-font
+        color: #333
+        font-size: 2rem
+        font-weight: bold
+        text-align: left
+        transition: .2s
+
+        @include mixins.responsivity-max-width-770
+          color: #520000
+          text-shadow: 0 0 2px rgba(0, 0, 0, .5)
+
+      p
+        font-family: variables.$secondary-font
+        font-weight: 600
+        padding-top: 5px
+        text-align: justify
+        color: #999
+        transition: .2s
+
+        @include mixins.responsivity-max-width-770
+          color: #000
+
+      &:hover
+        transform: scale(1.1)
+
+        @include mixins.responsivity-max-width-770
+          transform: none
+
+      &:hover  h2
+        color: #520000
+        text-shadow: 0 0 2px rgba(0, 0, 0, .5)
+
+      &:hover  p
+        color: #000

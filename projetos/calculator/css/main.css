@@ -1,0 +1,136 @@
+*,
+*:before,
+*:after {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.calculator {
+  width: 100%;
+  height: 100vh;
+  background-color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator .container {
+  width: 20rem;
+  height: 31.6rem;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 1px #ffffffe6;
+  color: #858585;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+}
+.calculator .container .header {
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+}
+.calculator .container .display {
+  height: 10rem;
+  padding: 0 15px;
+  position: relative;
+}
+.calculator .container .display .display-1 {
+  width: 320px;
+  position: absolute;
+  top: 35px;
+}
+.calculator .container .display .display-1 input {
+  width: 290px;
+  height: 20px;
+  background-color: transparent;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffffcc;
+  font-size: 15px;
+  cursor: auto;
+}
+.calculator .container .display .display-1 input::selection {
+  background-color: transparent;
+}
+.calculator .container .display .display-2 {
+  width: 320px;
+  position: absolute;
+  bottom: 45px;
+}
+.calculator .container .display .display-2 input {
+  width: 290px;
+  height: 50px;
+  background-color: transparent;
+  padding: 10px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffffe6;
+  font-size: 45px;
+  font-weight: 600;
+}
+.calculator .container .display .display-2 input::selection {
+  background-color: red;
+}
+.calculator .container .keyboard {
+  padding: 2px 3px;
+  display: grid;
+  grid-template-areas: "1fr 1fr 1fr 1fr";
+}
+.calculator .container .keyboard button {
+  margin: 1px;
+  width: 75px;
+  height: 49px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color: #ffffffe6;
+}
+.calculator .container .keyboard button i {
+  font-size: 15px;
+}
+.calculator .container .keyboard button:hover {
+  background-color: #555;
+}
+.calculator .container .keyboard #multiplication, .calculator .container .keyboard #minus, .calculator .container .keyboard #plus, .calculator .container .keyboard #equal {
+  font-size: 30px;
+  font-weight: 100;
+}
+.calculator .container .keyboard #division {
+  font-size: 27px;
+  font-weight: 100;
+}
+.calculator .container .keyboard #backspace {
+  font-size: 18px;
+  font-weight: 100;
+  background-image: url("../img/backspace-dark-mode-32x32.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.calculator .container .keyboard button.italic {
+  font-family: "Informal Roman";
+  font-style: italic;
+  font-size: 16px;
+}
+.calculator .container .keyboard button .not-italic {
+  font-size: 18px;
+  font-style: normal;
+}
+.calculator .container .keyboard button .adjust-size {
+  font-size: 25px;
+}
+.calculator .container .keyboard .btn-color-1 {
+  background-color: #131313;
+}
+.calculator .container .keyboard .btn-color-2 {
+  background-color: #060606;
+  font-weight: 500;
+}
+.calculator .container .keyboard .btn-color-3 {
+  background-color: #6f1921;
+}
+.calculator .container .keyboard .btn-color-3:hover {
+  background-color: #d31222;
+}
+
+/*# sourceMappingURL=main.css.map */
