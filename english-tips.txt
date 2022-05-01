@@ -198,7 +198,56 @@ AULA 09: PRONOMES {
   * WE              # US                - OUR                 + OURS
   * YOU             # YOU               - YOUR                + YOURS
   * THEY            # THEM              - THEIR               + THEIRS
+}
 
+AULA 10: A FAMÍLIA EM INGLÊS {
+  GRANDFATHER                 AVÔ
+  GREAT GRANDFATHER           BISAVÔ
+  GREAT GREAT GRANDFATHER     TATARAVÔ
+  GRANDMOTHER                 AVÓ
+  GREAT GRANDMOTHER           BISAVÓ
+  GREAT GREAT GRANDMOTHER     TATARAVÓ
+  FATHER                      PAI
+  MOTHER                      MÃE
+  BROTHER                     IRMÃO
+  SISTER                      IRMÃ
+  SON                         FILHO
+  DAUGHTER                    FILHA
+  GRANDSON                    NETO
+  GREAT GRANDSON              BISNETO
+  GREAT GREAT GRANDSON        TATARANETO
+  GRANDAUGHTER                NETA
+  GREAT GRANDAUGHTER          BISNETA
+  GREAT GREAT GRANDAUGHTER    TATARANETA
+  UNCLE                       TIO
+  AUNT                        TIA
+  COUSIN                      PRIMO(A)
+  NEPHEW                      SOBRIHNO
+  NIECE                       SOBRINHA
+  FATHER-IN-LAW               SOGRO
+  MOTHER-IN-LAW               SOGRA
+  BROTHER-IN-LAW              CUNHADO
+  SISTER-IN-LAW               CUNHADA
+  SON-IN-LAW                  GENRO
+  DAUGHTER-IN-LAW             NORA
+  STEPFATHER                  PADRASTO
+  STEPMOTHER                  MADRASTA
+  STEPSON                     ENTEADO
+  STEPDAUGHTER                ENTEADA
+  HALF BROTHER                MEIO IRMÃO
+  HALF SISTER                 MEIA IRMÃ
+  STEPBROTHER                 IRMÃODRASTO
+  STEPSISTER                  IRMÃODRASTA
+  GODFATHER                   PADRINHO
+  GODMOTHER                   MADRINHA
+  GODSON                      AFILHADO
+  GODDAUGHTER                 AFILHADA
+  BOYFRIEND                   MAMORADO
+  GIRLFRIEND                  NAMORADA
+  FIANCÉ (GROOM)              NOIVO
+  FIANCÉE (BRIDE)             NOIVA
+  HUSBAND                     MARIDO
+  WIFE                        ESPOSA
 }
 
 **QUANDO CHEGAR NA AULA 40 ==> REASSISTIR A AULA AO VIVO 08: PALAVRAS COM PRESENT PERFECT
@@ -503,6 +552,14 @@ AULA 08: PALAVRAS COM PRESENT PERFECT {
   FOR (POR/DURANTE) {
     I'VE STUDIED FOR 3 HOURS (EU TENHO ESTUDADO POR/DURANTE/FAZ 3 HORAS)
   }
+}
+
+AULA 10: SOM DE VOGAIS {
+  * QUANDO UMA VOGAL É ANTECEDIDA OU SUCEDIDA POR 2 CONSOANTES IGUAIS O SOM DA VOGAL NÃO SERÁ MAIS O MESMO (SOM ORIGINAL DAS VOGAIS A E I O U)
+  * PALAVRAS DE UMA SÍLIBA TERMINADAS COM CONSOANTE, OU PALAVRAS NORMAIS TERMINADAS COM 'VE' AS VOGAIS NÃO TEM SEU SOM ORIGINAL
+  * PALAVRAS TERMINADAS COM 'GH', O 'GH' TEM SOM DE 'F' E AS VOGAIS NÃO TEM SEU SOM ORIGINAL
+  * PALAVRAS TERMINADAS COM 'FF', 'SS' OU 'LL' AS VOGAIS TAMBEM NÃO TEM SOM ORIGINAL
+
 }
 
 ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     DICAS EM GERAL     ||     ||     ||     ||     ||     ||     ||
