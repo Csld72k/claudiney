@@ -250,6 +250,67 @@ AULA 10: A FAMÍLIA EM INGLÊS {
   WIFE                        ESPOSA
 }
 
+AULA 11: PLURAIS {
+  REGRA GERAL = + S {
+    CAR     <->     CARS
+    HOUSE   <->     HOUSES
+  }
+
+  PALAVRAS TERMINADAS COM: S, X, Z, SH, CH = + ES {
+    BUS     <->   BUSES
+    TAX     <->   TAXES
+    BLIZ    <->   BLITZES
+    MARSH   <->   MARSHES
+    BEACH   <->   BEACHES
+  }
+
+  PALAVRAS TERMINADAS COM Y {
+    PALAVRAS TERMINADAS COM VOGAL + Y = + S {
+      DAY   <=>   DAYS
+      TOY   <=>   TOYS
+    }
+
+    PALAVRAS TERMINADAS COM CONSOANTE + Y = - Y + IES {
+      BABY    <=>   BABIES
+      CITY    <=>   CITIES
+    }
+  }
+
+  PALAVRAS TERMINADAS COM F/FE = - F/FE + VES {
+    WOLF    <->   WOLVES
+    LIFE    <->   LIVES
+  }
+
+  PALAVRAS TERMINADAS COM O {
+    VOGAL + O = + S {
+      RADIO     <=>     RADIOS
+      STUDIO    <=>     STUDIOS
+    }
+
+    CONSOANTE + O = + ES{
+      HERO      <=>     HEROES
+      POTATO    <=>     POTATOES
+    }
+
+    EXCETO: PALAVRAS DERIVADAS DE MÚSICA E ARTE EX: INSTRUMENTOS MUSICAIS, INSTRUMENTOS DE ARTES. APENAS SE ACRESCENTA O "S" {
+      BANJO   <->   BANJOS
+      PIANO   <->   PIANOS
+      PHOTO   <->   PHOTOS
+    }
+  }
+
+  PLURAIS IRREGULARES {
+    CHILD   <->   CHILDREN
+    PERSON  <->   PEOPLE
+    MAN     <->   MEN
+    WOMAN   <->   WOMEN
+    FOOT    <->   FEET
+    TOOTH   <->   TEETH
+    GOOSE   <->   GEESE
+    MOUSE   <->   MICE
+  }
+}
+
 **QUANDO CHEGAR NA AULA 40 ==> REASSISTIR A AULA AO VIVO 08: PALAVRAS COM PRESENT PERFECT
 
 ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     AULAS AO VIVO     ||     ||     ||     ||     ||     ||     ||
@@ -559,7 +620,130 @@ AULA 10: SOM DE VOGAIS {
   * PALAVRAS DE UMA SÍLIBA TERMINADAS COM CONSOANTE, OU PALAVRAS NORMAIS TERMINADAS COM 'VE' AS VOGAIS NÃO TEM SEU SOM ORIGINAL
   * PALAVRAS TERMINADAS COM 'GH', O 'GH' TEM SOM DE 'F' E AS VOGAIS NÃO TEM SEU SOM ORIGINAL
   * PALAVRAS TERMINADAS COM 'FF', 'SS' OU 'LL' AS VOGAIS TAMBEM NÃO TEM SOM ORIGINAL
+}
 
+AULA 11: PRFIXOS E SUFIXOS {
+  PREFIXOS {
+    CO-* (JUNTO, COM) {
+      CO-PILOT     <->     COPILOTO
+      CO-WORKER    <->     COLEGA DE TRABALHO
+    }
+
+    DE* (OPOESTO) {
+      DEACTIVATE       <->     DESATIVADO
+      DECAFFEINATED    <->     DESCAFEINADO
+    }
+
+    DIS* (NEGATIVA, CONTRÁRIO) {
+      DISAGREE    <->   DESCORDAR
+      DISAPPEAR   <->   DESAPARECER
+    }
+
+    EM*/EN* (INCORPORAR, ADICIONAR) {
+      EMBRACE   <->   ABRAÇAR (NO SENTIDO FIGURATIVO COMO "ABRAÇAR A OPORTUNIDADE", DIFERENTE DO ABRAÇO FÍSICO QUE É "HUGE")
+      ENCLOSE   <->   LACRAR (NO SENTIDO DE LACRE)
+    }
+
+    FORE* (ANTES) {
+      FORECAST    <->   PREVISÃO (NO SENTIODO DE PREVISÃO DO TEMPO)
+      FORESEE     <->   PREVER (NO SENTIDO NORMAL, DE PREVER ALGO)
+    }
+
+    IL*/IM*/IN*/IR* (NÃO, NEGATIVA) {
+      ILLEGAL         <->       ILEGAL
+      IMPOSSIBLE      <->       IMPOSSÍVEL
+      IRRESPONSIBLE   <->       IRRESPONSÁVEL
+    }
+
+    INTER* (ENTRE) {
+      INTERSTELLAR    <->   INTERESTELAR
+    }
+
+    MID* (MEIO) {
+      MIDWAY        <->     MEIO DO CAMINHO/MEIO CAMINHO
+      MIDFIELDER    <->     MEIOCAMPISTA
+    }
+
+    MIS* (INCORRETO, MAL) {
+      MISFIRE            <->   FALHA DE DETONAÇÃO (FIRE ALÉM DE FOGO TAMBEM É TIRO DE ARMA POR ISSO ESSE SIGNIFICADO)
+      MISUNDERSTANDING   <->   MAL COMPREENDIDO/INCOMPREENDIDO
+    }
+
+    PRE* (ANTES) {
+      PRESCHOOL   <->   PRÉ-ESCOLA
+    }
+
+    RE* (NOVAMENTE) {
+      REDO    <->   REFAZER
+    }
+
+    SUPER* (SOBRE, SUPERIOR) {
+      SUPERNATURAL    <->   SOBRENATURAL
+    }
+
+    UN* (NÃO, NEGATIVA) {
+      UNFINISHED    <->     INACABADO
+      UNHAPPY       <->     INFELIZ
+    }
+  }
+
+  SUFIXOS {
+    *ABLE, *IBLE (PODE SER FEITO) {
+      ADORABLE      <->   ADORÁVEL
+      INCREDIBLE    <->   INCRÍVEL
+    }
+
+    *ACY (ESTADO, QUALIDADE) {
+      DEMOCRACY   <->   DEMOCRACIA
+      ACCURACY    <->   PRECISÃO
+    }
+
+    *DOM (ESTADO DE SER) {
+      FREEDOM   <->   LIBERDADE
+      BOREDOM   <->   ESTADO DE TÉDIO/ABORRECIMENTO
+    }
+
+    *OUS, *IOUS (ESTADO DE QUALIDADE) {
+      RIDICULOUS    <->   RIDÍCULO
+      RELIGIOUS     <->   RELIGIOSO
+    }
+
+    *ER, *OR, *IST (PESSOA OBJETO QUE REALIZA UMA AÇÃO) {
+      SINGER      <->   CANTOR
+      CREATOR     <->   CRIADOR
+      SCIENTIST   <->   CIENTISTA
+    }
+
+    *FUL (CHEIO DE) {
+      HOPEFUL   <->   ESPERANÇOSO/ CHEIO DE ESPERANÇA
+      USE       <->   ÚTIL
+    }
+
+    *ITY, *TY, *NESS (ESTADO DE QUALIDADE) {
+      VALIDITY    <->   VALIDADE
+      SICKNESS    <->   DOENÇA
+    }
+
+    *LESS (SEM, FALTA DE) {
+      HOMELESS    <->   SEM TETO/MORADOR DE RUA
+      HOPELESS    <->   SEM ESPERANÇA
+    }
+
+    *ED (VERBOS NO PASSADO) {
+      WORKED    <->   TRABALHADO/TRABALHEI/TRABALHOU/ETC
+      LOVED     <->   AMADO/AMEI/AMOU/ETC'
+    }
+
+    *LY (ADVÉRBIOS) {
+      SLOWLY    <->   LENTAMENTE
+      QUICKLY   <->   RAPIDAMENTE
+    }
+
+    *ER, *EST (ADJETIVOS COMPARATIVOS/SUPERLATIVOS) {
+      COLDER    <->   MAIS FRIO
+      COLDEST   <->   O MAIS FRIO
+    }
+  }
 }
 
 ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     DICAS EM GERAL     ||     ||     ||     ||     ||     ||     ||
