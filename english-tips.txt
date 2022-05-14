@@ -311,6 +311,26 @@ AULA 11: PLURAIS {
   }
 }
 
+AULA 12: COMO DIZER AS HORAS {
+  01:00 IT'S ONE O'CLOCK                        01:35 IT'S ONE THIRTY-FIVE
+  01:00 IT'S ONE A.M.                           01:35 IT'S TWENTY-FIVE TO TWO
+  01:00 IT'S ONE P.M.                           01:40 IT'S ONE FORTY
+  01:05 IT'S ONE OH FIVE                        01:40 IT'S TWENTY TO TWO
+  01:05 IT'S FIVE PAST ONE                      01:45 IT'S ONE FORTY-FIVE
+  01:10 IT'S ONE TEN                            01:45 IT'S ONE FORTY-FIVE
+  01:10 IT'S TEN PAST ONE                       01:45 IT'S FIFTEEN TO TWO
+  01:15 IT'S ONE FIFTEEN                        01:45 IT'S A QUARTER TO TWO
+  01:15 IT'S FIFTEEN PAST ONE                   01:50 IT'S ONE FIFTY
+  01:15 IT'S A QURTER PAST ONE                  01:50 IT'S TEN TO TWO
+  01:20 IT'S ONE TWENTY                         02:00 IT'S TWO O'CLOCK
+  01:20 IT'S TWENTY PAST ONE                    12:00 IT'S TWELVE O'CLOCK
+  01:25 IT'S ONE TWENTY-FIVE                    12:00 IT'S TWELVE A.M.
+  01:25 IT'S TWNETY-FIVE PAST ONE               12:00 IT'S TWELVE P.M.
+  01:30 IT'S ONE THIRTY                         12:00 IT'S NOON
+  01:30 IT'S THIRTY PAST ONE                    12:00 IT'S MIDNIGHT
+  01:30 IT'S HALF PAST ONE
+}
+
 **QUANDO CHEGAR NA AULA 40 ==> REASSISTIR A AULA AO VIVO 08: PALAVRAS COM PRESENT PERFECT
 
 ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     AULAS AO VIVO     ||     ||     ||     ||     ||     ||     ||
