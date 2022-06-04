@@ -1,0 +1,215 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+main
+  display: flex
+  justify-content: center
+  align-items: center
+
+  article
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 98px auto 0
+    padding-right: 19px
+
+    @include mixins.responsivity
+      margin: 0
+      padding: 0
+
+    @include mixins.height-responsivity
+      margin: 30px auto 0
+
+    .cell-phone-container
+      background: url("../img/cell-phone2.png")
+      background-repeat: no-repeat
+      background-size: 380px 585px
+      width: 415px
+      height: 590px
+
+      @include mixins.responsivity
+        display: none
+
+      .cell-phone
+        margin: 27px 0px 0px 112px
+        position: relative
+
+        img
+          opacity: 0
+          position: absolute
+          transition: opacity 3s
+
+          &.selected
+            opacity: 1
+
+    .account-container
+
+      img
+        width: 30px
+
+      .login-container
+        outline: 1px solid variables.$border-color
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        background-color: white
+
+        @include mixins.responsivity
+          background-color: variables.$primary-color
+          outline: none
+
+        img
+          width: 175px
+          margin: 34px auto 0
+
+        form
+          display: flex
+          flex-direction: column
+          justify-content: center
+          align-items: center
+          margin: 45px 0 0
+
+          input
+            outline: 1px solid variables.$border-color
+            background-color: variables.$primary-color
+            height: 35px
+            width: 265px
+            margin: 0 40px 8px
+            padding: 10px
+            border-radius: 2px
+            font-size: 12px
+
+            &.content
+              padding: 20px 10px 5px
+
+          label
+            position: relative
+
+            .username, .password
+              position: absolute
+              left: 50px
+              top: 10px
+              font-size: 12px
+              color: variables.$footer-text
+              transition: .1s
+
+          .show-password
+            display: none
+            position: absolute
+            right: 50px
+            top: 10px
+            font-size: 12px
+            color: variables.$hide-show-password
+            font-weight: 600
+            cursor: pointer
+            background-color: transparent
+
+          .show-password.on
+            display: block
+
+          .username.content
+            font-size: 10px
+            top: 5px
+
+          .password.content
+            font-size: 10px
+            top: 5px
+
+          .login-btn.content
+            cursor: pointer
+            background-color: variables.$login-on
+
+          input[type="submit"]
+            background-color: variables.$login-off
+            color: white
+            font-size: 12px
+            font-weight: bold
+            height: 28px
+            padding: 0
+            margin-top: 8px
+
+        .line
+          display: flex
+          justify-content: center
+          align-items: center
+          width: 265px
+          height: 0
+          border-top: 1px solid variables.$border-color
+          margin-top: 15px
+
+          span
+            background-color: white
+            padding: 0 20px
+            color: variables.$footer-text
+            font-size: 12px
+            font-weight: bold
+
+            @include mixins.responsivity
+              background-color: variables.$primary-color
+
+        .login-with-facebook
+          display: flex
+          justify-content: center
+          align-items: center
+          margin-top: 38px
+
+          a
+            display: flex
+            justify-content: center
+            align-items: center
+
+            img
+              width: 16px
+              margin: 0
+              margin-right: 10px
+
+            span
+              font-size: 14px
+              text-shadow: 0px 0px 1px variables.$login-facebook
+              color: variables.$login-facebook
+
+        .forgot-password
+          margin: 15px auto
+          a
+            font-size: 12px
+            color: variables.$forgot-password
+
+      .signup
+        outline: 1px solid variables.$border-color
+        margin-top: 12px
+        background-color: white
+        padding: 20px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 14px
+
+        @include mixins.responsivity
+          background-color: variables.$primary-color
+          outline: none
+
+        span
+
+          a
+            text-shadow: 0px 0px 1px variables.$login-on
+            color: variables.$login-on
+
+      .get-app
+        text-align: center
+
+        p
+          font-size: 14px
+          margin: 20px auto
+
+        .download-links
+          display: flex
+          justify-content: center
+          align-items: center
+
+          a
+            margin: 0 5px
+
+            img
+              height: 40px
+              width: 100%

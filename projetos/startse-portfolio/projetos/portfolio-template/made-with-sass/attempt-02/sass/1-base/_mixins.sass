@@ -1,0 +1,51 @@
+@use 'variables'
+
+@keyframes zoomBackgroundImage
+  0%
+    transform: scale(1)
+
+  50%
+    transform: scale(1.3)
+
+  100%
+    transform: scale(1.0)
+
+@keyframes moveHeaderText
+  0%
+    transform: translateY(15rem) rotateY(-30deg)
+
+  100%
+    transform: translateY(0) rotateY(0)
+    opacity: 1
+
+@mixin section-title
+  .header
+    width: 100%
+    background-color: #eee
+    display: flex
+    justify-content: center
+    align-items: center
+
+    h1
+      font-family: variables.$primary-font
+      font-size: 3rem
+      padding: .25rem 0
+      color: variables.$title-color
+      border-bottom: 3px solid
+      border-image: variables.$border-gradient
+
+@mixin section-body
+  width: 100%
+  background-color: #f5f5f5
+
+@mixin responsivity-max-width-770
+  @media(max-width: 770px)
+    @content
+
+@mixin responsivity-max-width-1600
+  @media(max-width: 1600px)
+    @content
+
+@mixin responsivity-max-width-550
+  @media(max-width: 550px)
+    @content

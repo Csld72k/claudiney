@@ -1,0 +1,52 @@
+#Dica 1:
+Pesquise em inglês
+
+#Dica 2:
+Remova da busca qualquer palavras específica do seu
+sistema
+
+#Dica 3:
+Adicionar o nome da biblioteca ou linguagem de
+programação no ínicio da busca pode ajudar
+
+#Dica 4:
+Utilize aspas duplas para buscar o termo específico,
+removendo conteúdo similares
+"Programação Web
+
+#Dica 5:
+Caso queira buscar em um site específico (que não tenha um
+sistema de busca) utilize:
+site:https://developer.mozilla.org introdução
+
+#Dica 6:
+Caso queira remover um termo específico da busca, utilize o
+hífen
+how manipulate html dom -jquery
+
+#Dica 7:
+Podemos utilizar o before e especificar o ano para buscar
+conteúdos mais antigos
+javascript before:2021
+
+#Dica 8:
+Podemos utilizar o after e especificar o ano para buscar
+conteúdos mais novos
+javascript after:2021
+
+#Dica 9:
+Podemos utilizar o .. e para intervalos de datas
+es5 announcement 2008..2011
+
+#Dica 10:
+Podemos utilizar o pipe "|" para comparação de tecnologias
+reactjs | vuejs | angular
+
+#Dica 11:
+Podemos especificar o tipo de arquivo que estamos buscando
+martin fowler microservices filetype:pdf
+
+#Dica 12:
+Podemos utilizar o related para encontrar termos
+relacionados ao que estamos buscando
+related:microservices

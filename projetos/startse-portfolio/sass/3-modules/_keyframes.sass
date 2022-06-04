@@ -1,0 +1,20 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+@keyframes textReveal
+  100%
+    color: variables.$text-color
+
+@keyframes textRevealName
+  100%
+    color: variables.$button-text-color
+    font-weight: 500px
+
+@keyframes textRevealBox
+  50%
+    width: 100%
+    left: 0
+
+  100%
+    width: 0
+    left: 100%
