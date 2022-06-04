@@ -13,6 +13,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-image: linear-gradient(to right, #5a10b5 0%, #002349 100%);
+}
+
 section {
   min-height: 100vh;
   width: 100%;
@@ -103,31 +107,19 @@ section {
   background-color: #ffd700;
 }
 
-#projects .projects-container {
-  max-width: 1200px;
-  flex-direction: column;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-#projects .projects-header {
-  margin-bottom: 50px;
-}
-#projects .projects-header .section-title {
-  font-size: 4rem;
-  font-weight: 500;
-  color: #000;
-  margin: 5px 0 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
 #projects .all-projects {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  #projects .all-projects a:nth-child(even) .project-card {
+    flex-direction: row-reverse;
+  }
+}
 #projects .all-projects .project-card {
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +127,8 @@ section {
   width: 80%;
   margin: 20px auto;
   overflow: hidden;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  border: 2.5px solid white;
   border-radius: 10px;
 }
 @media (min-width: 768px) {
@@ -143,16 +137,16 @@ section {
     height: 400px;
     margin: 0;
     width: 100%;
-    border-radius: 0;
-  }
-}
-@media (min-width: 768px) {
-  #projects .all-projects .project-card:nth-child(even) {
-    flex-direction: row-reverse;
   }
 }
 #projects .all-projects .project-card:hover .project-bg img {
   transform: scale(1.1);
+}
+#projects .all-projects .project-card .project-info.odd {
+  background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
+}
+#projects .all-projects .project-card .project-info.even {
+  background-image: linear-gradient(60deg, #002349 0%, #5a10b5 100%);
 }
 #projects .all-projects .project-card .project-info {
   padding: 30px;
@@ -162,7 +156,6 @@ section {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%);
   color: #fff;
 }
 @media (min-width: 768px) {
@@ -173,11 +166,6 @@ section {
 #projects .all-projects .project-card .project-info h2 {
   font-size: 4rem;
   font-weight: 500;
-}
-#projects .all-projects .project-card .project-info h3 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-top: 10px;
 }
 #projects .all-projects .project-card .project-info p {
   font-size: 1.4rem;
@@ -204,14 +192,30 @@ section {
   top: 0;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  opacity: 0.7;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
 }
 #projects .all-projects .project-card .project-bg img {
   transition: 0.5s ease transform;
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+body .section-container {
+  max-width: 1200px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 70px 0;
+}
+body .section-title h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 5px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=main.css.map */
