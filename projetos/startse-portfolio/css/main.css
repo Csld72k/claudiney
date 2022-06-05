@@ -17,7 +17,7 @@ body {
   background-image: linear-gradient(to right, #5a10b5 0%, #002349 100%);
 }
 
-section {
+section.section {
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -199,6 +199,196 @@ section {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+#knowledge {
+  padding: 0 1rem;
+}
+#knowledge .all-knowledge {
+  width: 100%;
+  padding: 3rem 0;
+  background-image: url("../img/knowledge.png");
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: justify;
+  color: #fff;
+  border-radius: 10px;
+}
+#knowledge .all-knowledge .block {
+  width: 360px;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  transition: 0.2s;
+}
+@media (min-width: 768px) {
+  #knowledge .all-knowledge .block {
+    width: 360px;
+  }
+}
+#knowledge .all-knowledge .block:hover {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 1rem;
+  transform: scale(1);
+}
+@media (min-width: 768px) {
+  #knowledge .all-knowledge .block:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+}
+#knowledge .all-knowledge .block h2 {
+  font-size: 2rem;
+  color: #ff0062;
+  text-shadow: 1px 1px 2px black, -1px -1px 2px black;
+}
+#knowledge .all-knowledge .block p {
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 1px black, -1px -1px 1px black;
+}
+
+#contact {
+  background-image: url("../img/tela.png");
+  background-repeat: no-repeat;
+  background-size: 60rem;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 29rem;
+}
+@media (min-width: 768px) {
+  #contact {
+    padding-bottom: 29rem;
+    background-size: 90rem;
+  }
+}
+#contact .section-title {
+  margin: 1rem;
+}
+#contact .form {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: cursive;
+}
+@media (min-width: 768px) {
+  #contact .form {
+    width: 670px;
+    margin: 5rem 0 15rem;
+  }
+}
+#contact .form h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+#contact .form form {
+  width: 70%;
+  height: 80%;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  #contact .form form {
+    margin: 4rem 0 2rem;
+  }
+}
+#contact .form .input-wrapper {
+  position: relative;
+}
+#contact .form .input-wrapper input, #contact .form .input-wrapper textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  outline: none;
+  border-bottom: 2px dashed #777;
+  color: #777;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 0.2rem;
+}
+@media (min-width: 768px) {
+  #contact .form .input-wrapper input, #contact .form .input-wrapper textarea {
+    margin-bottom: 2rem;
+  }
+}
+#contact .form .input-wrapper input:-webkit-autofill, #contact .form .input-wrapper textarea:-webkit-autofill {
+  -webkit-text-fill-color: #777;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  color: #777;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#contact .form .input-wrapper textarea {
+  max-width: 100%;
+  max-height: 6rem;
+  min-width: 100%;
+  min-height: 6rem;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  #contact .form .input-wrapper textarea {
+    max-height: 10rem;
+    min-height: 10rem;
+  }
+}
+#contact .form button {
+  width: 100%;
+  margin-top: 4rem;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #777;
+  background-color: transparent;
+  border: 2px solid #777;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color, color, 0.3s ease;
+}
+#contact .form button:hover {
+  background-color: #161616;
+  color: white;
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  color: #969696;
+  padding: 1rem;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+  }
+}
+footer .footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  footer .social-media {
+    justify-content: left;
+  }
+}
+footer .social-media i {
+  color: #969696;
+  font-size: 2.2rem;
+  margin: 1rem 5rem 1rem 5rem;
 }
 
 body .section-container {
