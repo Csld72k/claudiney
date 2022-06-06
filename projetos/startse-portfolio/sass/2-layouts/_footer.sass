@@ -2,13 +2,18 @@
 @use '../1-base/mixins'
 
 footer
-  background-color: rgba(255, 255, 255, .1)
+  width: 100%
+  background-color: rgba(0, 0, 0, .5)
+  background-image: linear-gradient(to right, rgba(90, 16, 181, .2) 0%, rgba(0, 35, 73, .2))
   display: flex
   justify-content: space-evenly
   font-size: 1.5rem
   color: rgb(150, 150, 150)
   padding: 1rem
   flex-direction: column
+  position: absolute
+  bottom: 0
+  border-radius: 10px
 
   @include mixins.responsivity-min-width-768px
     flex-direction: row
