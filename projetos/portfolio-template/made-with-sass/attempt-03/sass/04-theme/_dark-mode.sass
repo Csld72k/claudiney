@@ -1,0 +1,118 @@
+html.dark
+  $light-white: #ccc
+  $light-white-2: #eaeaea
+  $black-1: #424242
+  $section-color: #303030
+  $header-color: #454545
+  $red-hover: #b40000
+
+  #nav-menu
+    background-color: $black-1
+    ul
+
+    a
+      color: $light-white
+
+    .social-media
+
+      i
+        color: $light-white
+
+  #home
+
+    span
+      color: $light-white
+
+    button
+      color: $light-white
+
+  #knowledge
+    background-color: $section-color
+
+    .header
+      background-color: $header-color
+
+      h1
+        color: $light-white
+
+    .container
+
+      .card-container
+        background: url('../img/conhecimentos-v-dark-theme.png')
+        background-repeat: no-repeat
+        background-position: center
+        background-size: 25rem
+
+      .card
+
+        &:hover
+
+          h2, i
+            color: $red-hover
+            text-shadow: none
+
+          p
+            color: $light-white
+
+      .card-header
+
+        h2, i
+          color: $light-white-2
+
+  #projects
+    background-color: $section-color
+
+    .header
+      background-color: $header-color
+
+  #contact
+
+    .container-right
+      background-color: $section-color
+
+      form
+
+        legend
+          color: $light-white
+
+        label, label[for="message"]
+          color: $light-white
+
+          &.content
+            top: -1.5rem
+            color: $red-hover
+
+        input, textarea
+          background-color: $section-color
+          color: $light-white
+
+          &:-webkit-autofill
+            -webkit-text-fill-color: $light-white
+            -webkit-box-shadow: 0 0 0px 1000px $section-color inset
+            color: $light-white
+
+          &:-webkit-autofill ~ label[for='name'], &:-webkit-autofill ~ label[for='email']
+            color: $red-hover
+
+          &:-webkit-autofill label[for='mesage']
+            color: $red-hover
+
+  #budget
+
+    .container
+      background-color: rgba(48, 48, 48, .8)
+
+      h1
+        color: $light-white
+
+      form
+        color: $light-white
+
+        #deadline
+          background-color: rgba(48, 48, 48, .8)
+
+        #amount
+          background-color: $light-white
+
+        button
+          color: $light-white

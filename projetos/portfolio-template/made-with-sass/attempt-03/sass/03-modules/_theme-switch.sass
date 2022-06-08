@@ -1,0 +1,91 @@
+@use '../01-base/variables'
+@use '../01-base/mixins'
+
+#theme-toggle
+  visibility: hidden
+
+html.light
+
+  #dark-and-light-mode img, #dark-and-light-mode img
+    opacity: 0
+    transition: .2s
+
+    &::selection
+      background-color: transparent
+
+  #dark-and-light-mode
+    width: 3.5rem
+    height: 1.7rem
+    top: 0
+    left: 0
+    background-color: rgb(150, 150, 150)
+    border-radius: 50px
+    margin: .5rem
+    padding: .3rem
+    position: absolute
+    transition: .2s
+    cursor: pointer
+
+    .background-circle
+      width: 1.4rem
+      height: 1.4rem
+      top: .1rem
+      left: .2rem
+      background-color: rgb(75, 75, 75)
+      border-radius: 50%
+      position: inherit
+      transition: .2s
+
+      .theme-switch-light
+        width: 1rem
+        height: 1rem
+        margin: .1rem .4rem
+        opacity: 1
+        position: inherit
+        top: .1rem
+        left: -.2rem
+        transition: .2s
+        animation: ease buttonThemeSwotchRotate .2s forwards
+
+html.dark
+
+  #dark-and-light-mode img, #dark-and-light-mode img
+    opacity: 0
+    transition: .2s
+
+    &::selection
+      background-color: transparent
+
+  #dark-and-light-mode
+    width: 3.5rem
+    height: 1.7rem
+    top: 0
+    left: 0
+    background-color: rgb(75, 75, 75)
+    border-radius: 50px
+    margin: .5rem
+    padding: .3rem
+    position: absolute
+    transition: .2s
+    cursor: pointer
+
+    .background-circle
+      width: 1.4rem
+      height: 1.4rem
+      top: .1rem
+      left: 1.9rem
+      background-color: rgb(150, 150, 150)
+      border-radius: 50%
+      position: inherit
+      transition: .2s
+
+      .theme-switch-dark
+        width: 1rem
+        height: 1rem
+        margin: .1rem .4rem
+        opacity: 1
+        position: inherit
+        top: .1rem
+        left: -.2rem
+        transition: .2s
+        animation: buttonThemeSwotchRotate .2s forwards

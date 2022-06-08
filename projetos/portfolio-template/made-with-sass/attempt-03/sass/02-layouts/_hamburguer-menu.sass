@@ -2,6 +2,29 @@
 
 .menu-container
 
+  a.btn-arrow
+    position: fixed
+    width: 3em
+    height: 3em
+    right: 2em
+    bottom: 0.5em
+    border-radius: 7px
+    background-color: red
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .7)1%, rgba(0, 0, 0, .2), rgba(0, 0, 0, .7)99%)
+    z-index: 15
+    display: flex
+    justify-content: center
+    align-items: center
+
+    i
+      font-size: 2rem
+      color: #fff
+      text-shadow: 2px 2px 2px #000, -1px -1px 2px #000, -1px 1px 2px #000, 1px -1px 2px #000
+
+    &.hide
+      transition: .2s
+      opacity: 0
+
   .hamburguer-menu-button
     width: 3rem
     height: 3rem
@@ -71,6 +94,7 @@
     position: fixed
     top: 0
     right: -20rem
+    // right: 0
     background-color: #e1e1e1
     z-index: 90
     display: flex
@@ -81,11 +105,6 @@
     &.show
       right: 0
       transition: 0.5s cubic-bezier(0, 1.32, 0.24, 1.37)
-
-    .dark-and-light-mode
-      position: absolute
-      top: 0
-      left: 0
 
     ul
 
