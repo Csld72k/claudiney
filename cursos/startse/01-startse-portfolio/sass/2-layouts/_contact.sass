@@ -1,0 +1,120 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#contact
+
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 100vh
+  background-image: linear-gradient(to bottom, rgba(90, 16, 181, .8) 0%, rgba(90, 16, 181, .6) 20%, rgba(0, 35, 73, .6) 100%), url('../img/movie.gif')
+
+  @include mixins.responsivity-min-width-768px
+
+  .section-title
+    margin: 8rem 0 2rem
+
+  .container
+    min-width: 80%
+    height: 48rem
+    display: flex
+    box-shadow: 5px 5px 50px #000000
+    border-radius: 10px
+
+    @include mixins.responsivity-min-width-768px
+      width: 50.5%
+      min-width: 600px
+
+    .background
+      display: none
+      width: 34%
+      height: 100%
+      background: linear-gradient(to top, rgba(0, 0, 0, .2), rgba(0, 0, 0, .1)), url("../img/contact-bg2.jpg")
+      background-size: cover
+      background-position: center
+      border-top-left-radius: 10px
+      border-bottom-left-radius: 10px
+
+      @include mixins.responsivity-min-width-768px
+        display: block
+
+    .form
+      width: 100%
+      height: 100%
+      background-color: #494250
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      border-top-left-radius: 10px
+      border-top-right-radius: 10px
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+
+      @include mixins.responsivity-min-width-768px
+        width: 66%
+        border-top-left-radius: 0px
+        border-top-right-radius: 10px
+        border-bottom-left-radius: 0px
+        border-bottom-right-radius: 10px
+
+      h1
+        font-size: 4rem
+        font-weight: 500
+        color: #e6e6e6
+
+      form
+        width: 70%
+        height: 80%
+        padding-top: 5rem
+
+      .input-wrapper
+        position: relative
+
+        input, textarea
+          width: 100%
+          margin-bottom: 2rem
+          outline: none
+          border-bottom: 2px solid #777
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+          color: #c7c7c7
+          font-size: 1.5rem
+          padding: 1rem .2rem
+          background-color: #494250
+
+          &::placeholder
+            color: #c7c7c7
+
+          &:-webkit-autofill
+            -webkit-text-fill-color: #c7c7c7
+            -webkit-box-shadow: 0 0 0px 1000px #494250 inset
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+            color: #c7c7c7
+            font-size: 1.5rem
+
+        textarea
+          max-width: 100%
+          max-height: 6rem
+          min-width: 100%
+          min-height: 6rem
+          margin-bottom: 0
+          background-color: #494250
+
+      button
+        width: 100%
+        height: 4rem
+        border-radius: 5px
+        font-size: 1.6rem
+        letter-spacing: .3rem
+        margin-top: 2.5rem
+        text-shadow: 1px 1px 2px rgb(0 0 0 / 80%), 1px -1px 2px rgb(0 0 0 / 80%), -1px 1px 2px rgb(0 0 0 / 80%), -1px -1px 2px rgb(0 0 0 / 80%)
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        background-color: #d24ae4
+        background-image: linear-gradient(to top, rgba(0, 0, 0, .5)1%, rgba(0, 0, 0, .2), rgba(0, 0, 0, .5)99%)
+        color: #fff
+        transition: .2s
+
+        &:hover
+          cursor: pointer
+          background-color: #c139d3

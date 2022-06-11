@@ -1,0 +1,74 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+header
+  width: 100%
+  height: 100vh
+  position: relative
+  background-color: #333
+  overflow: hidden
+  z-index: 20
+
+  @include mixins.responsivity-max-width-770
+    height: 33vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+  img
+    width: 100%
+    height: 100%
+    opacity: .5
+    object-fit: cover
+    animation: zoomBackgroundImage 60s infinite
+
+  .content
+    position: absolute
+    top: 39%
+    left: 41%
+    transform: translate(-50%, -50%)
+    font-family: variables.$primary-font
+    color: variables.$header-text-color
+
+    @include mixins.responsivity-max-width-770
+      width: 100%
+      padding: 1rem
+      top: 10%
+      left: 0
+      transform: translate(0, 0)
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
+    h1
+      font-size: 3.5rem
+      font-weight: 500
+      text-shadow: 1px 1px 5px rgb(0 0 0 / 80%), 1px -1px 5px rgb(0 0 0 / 80%), -1px 1px 5px rgb(0 0 0 / 80%), -1px -1px 5px rgb(0 0 0 / 80%)
+      opacity: 0
+      animation: moveHeaderText 1s forwards .5s
+
+      @include mixins.responsivity-max-width-770
+        font-size: 2rem
+        text-align: center
+
+    h2
+      font-family: variables.$secondary-font
+      font-size: 2.5rem
+      line-height: 4rem
+      font-weight: 500
+      text-shadow: 1px 1px 5px rgb(0 0 0 / 80%), 1px -1px 5px rgb(0 0 0 / 80%), -1px 1px 5px rgb(0 0 0 / 80%), -1px -1px 5px rgb(0 0 0 / 80%)
+      opacity: 0
+      animation: moveHeaderText 1s forwards .7s
+
+      @include mixins.responsivity-max-width-770
+        font-size: 2rem
+        text-align: center
+
+    button
+      opacity: 0
+      animation: moveHeaderText 1s forwards .9s
+
+      @include mixins.responsivity-max-width-770
+        width: 10rem
+        height: 2.6rem

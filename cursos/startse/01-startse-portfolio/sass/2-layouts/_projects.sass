@@ -1,0 +1,91 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#projects
+
+  .all-projects
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+    & a:nth-child(even) .project-card
+      @include mixins.responsivity-min-width-768px
+        flex-direction: row-reverse
+
+    .project-card
+      background-color: white
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-direction: column
+      width: 80%
+      margin: 20px auto
+      overflow: hidden
+      box-shadow: 0 0 50px rgba(0, 0, 0, .8)
+      border: 2.5px solid white
+      border-radius: 10px
+
+      @include mixins.responsivity-min-width-768px
+        flex-direction: row
+        height: 400px
+        margin: 0
+        width: 100%
+
+      &:hover .project-bg img
+        transform: scale(1.1)
+
+      .project-info.odd
+        background-image: linear-gradient(60deg, #5a10b5 0%, #002349 100%)
+
+      .project-info.even
+        background-image: linear-gradient(60deg, #002349 0%, #5a10b5 100%)
+
+      .project-info
+        padding: 30px
+        flex-basis: 50%
+        height: 100%
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        flex-direction: column
+
+        color: variables.$text-color
+
+        @include mixins.responsivity-min-width-768px
+          height: 100%
+
+        h2
+          font-size: 4rem
+          font-weight: 500
+
+        p
+          font-size: 1.4rem
+          margin-top: 5px
+          line-height: 2.5rem
+          font-weight: 200
+          letter-spacing: .05rem
+
+      .project-bg
+        flex-basis: 50%
+        height: 300px
+        overflow: hidden
+        position: relative
+
+        @include mixins.responsivity-min-width-768px
+          height: 100%
+
+        &:after
+          content: ''
+          position: absolute
+          left: 0
+          top: 0
+          height: 100%
+          width: 100%
+          background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .1))
+
+        img
+          transition: .5s ease transform
+          height: 100%
+          width: 100%
+          object-fit: cover

@@ -1,0 +1,183 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#projects
+  @include mixins.section-body
+  @include mixins.section-title
+
+  .container
+    width: 100%
+    height: 80%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    padding: 11.8rem 11rem
+
+    @include mixins.responsivity-max-width-1600
+      padding: 6.1rem 4rem
+
+    @include mixins.responsivity-max-width-770
+      padding: 2rem 0
+
+    .card-1
+      background: url("../img/project-1v.jpg")
+      background-size: cover
+      background-position: center
+      border: 1px solid variables.$project-title-color
+
+    .card-2
+      background: url("../img/project-2v.jpg")
+      background-size: cover
+      background-position: center
+      border-top: 1px solid variables.$project-title-color
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-3
+      background: url("../img/project-3v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-top: 1px solid variables.$project-title-color
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-4
+      background: url("../img/project-4v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-top: 1px solid variables.$project-title-color
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-5
+      background: url("../img/project-5v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-left: 1px solid variables.$project-title-color
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-6
+      background: url("../img/project-6v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-7
+      background: url("../img/project-7v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card-8
+      background-image: url("../img/project-8v.jpg")
+      background-size: cover
+      background-position: center
+      background-position: center
+      border-right: 1px solid variables.$project-title-color
+      border-bottom: 1px solid variables.$project-title-color
+
+    .card
+      width: 20rem
+      height: 15rem
+
+      @include mixins.responsivity-max-width-770
+        .dark-effect-on-bg
+          border: 2px solid variables.$primary-color
+          border-image: variables.$primary-color
+          padding: 1rem
+          background: rgba(0, 0, 0, .5)
+          display: block
+          // margin-top: .5rem
+
+      .dark-effect-on-bg
+        padding: 5rem 0rem 1rem 0rem
+        width: 100%
+        height: 100%
+        background: rgba(0, 0, 0, .2)
+        transition: .3s
+
+        @include mixins.responsivity-max-width-770
+          border: 2px solid variables.$primary-color
+          border-image: variables.$primary-color
+          padding: 1rem
+          ackground: rgba(0, 0, 0, .5)
+          display: block
+          background: rgba(0, 0, 0, .5)
+
+        h2
+          color: #ff6e0d
+          padding: 1rem 0rem 1rem 7rem
+          font-family: variables.$primary-font
+          text-shadow: 2px 2px 2px rgba(0, 0, 0, .6), -2px 2px 2px rgba(0, 0, 0, .6), 2px -2px 2px rgba(0, 0, 0, .6), -2px -2px 2px rgba(0, 0, 0, .6)
+          transition: .3s
+
+          @include mixins.responsivity-max-width-770
+            padding: 1rem 0 1.5rem
+
+        p
+          display: none
+          color: #fff
+          font-family: variables.$secondary-font
+          text-shadow: 4px 4px 3px rgb(0 0 0 / 80%), 1px -1px 2px rgb(0 0 0 / 80%), -1px 1px 2px rgb(0 0 0 / 80%), -1px -1px 2px rgb(0 0 0 / 80% )
+          transition: 0s
+
+          @include mixins.responsivity-max-width-770
+            margin: 0
+            display: block
+
+      &:hover > .dark-effect-on-bg
+        border: 4px solid rgba(150, 0, 0, .5)
+        border-image: rgba(150, 0, 0, .5)
+        padding: 1rem
+        background: rgba(0, 0, 0, .5)
+        display: block
+
+      &:hover > .dark-effect-on-bg h2
+        padding: 1rem 0 1.5rem
+
+      &:hover > .dark-effect-on-bg p
+        margin: 0
+        display: block
+
+    .card-8
+      padding: 0
+
+      @include mixins.responsivity-max-width-770
+        // padding: 1rem
+        // margin-top: .5rem
+
+      &:hover > .dark-effect-on-bg
+        border: 4px solid rgba(150, 0, 0, .5)
+        border-image: variables.$primary-color
+        padding: 1rem
+        background: rgba(0, 0, 0, .5)
+        display: block
+
+      .dark-effect-on-bg
+        padding: 5rem 0rem 1rem 0rem
+        text-align: center
+
+        h2
+          padding: 1rem 0 0 0
+
+      &:hover
+        padding: 0
+        transition: .3s
+
+        .dark-effect-on-bg
+          padding: 5rem 0rem 1rem 0rem
+
+          h2
+            transform: scale(1.1)
+
+            @include mixins.responsivity-max-width-770
+              transform: none

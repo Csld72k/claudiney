@@ -1,0 +1,37 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+footer
+  width: 100%
+  background-color: rgba(0, 0, 0, .5)
+  background-image: linear-gradient(to right, rgba(90, 16, 181, .2) 0%, rgba(0, 35, 73, .2))
+  display: flex
+  justify-content: space-evenly
+  font-size: 1.5rem
+  color: rgb(150, 150, 150)
+  padding: 1rem
+  flex-direction: column
+  position: absolute
+  bottom: 0
+  border-radius: 10px
+
+  @include mixins.responsivity-min-width-768px
+    flex-direction: row
+
+  .footer-text
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .social-media
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @include mixins.responsivity-min-width-768px
+      justify-content: left
+
+    i
+      color: rgb(150, 150, 150)
+      font-size: 2.2rem
+      margin: 1rem 5rem 1rem 5rem

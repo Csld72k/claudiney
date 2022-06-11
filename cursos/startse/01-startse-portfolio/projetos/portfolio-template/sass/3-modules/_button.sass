@@ -1,0 +1,19 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+button
+  width: 11rem
+  height: 3rem
+  border-radius: 5px
+  font-size: 1.2rem
+  margin-top: 1rem
+  letter-spacing: 1px
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 80%), 1px -1px 2px rgb(0 0 0 / 80%), -1px 1px 2px rgb(0 0 0 / 80%), -1px -1px 2px rgb(0 0 0 / 80%)
+  font-family: variables.$action-font
+  background-color: variables.$primary-color
+  background-image: variables.$gradient-effect
+  color: #fff
+
+  &:hover
+    cursor: pointer
+    background-color: rgba(230, 0, 0, 1)

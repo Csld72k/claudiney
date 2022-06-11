@@ -1,0 +1,47 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#knowledge
+  padding: 0 1rem
+
+  .all-knowledge
+    width: 100%
+    padding: 3rem 0
+    background-image: url('../img/knowledge.png')
+    background-size: cover
+    background-position: center
+    background-color: rgba(255, 255, 255, .1)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    text-align: justify
+    color: variables.$text-color
+    border-radius: 10px
+
+    .block
+      width: 360px
+      margin: 1rem 0 2rem
+      padding: 1rem
+      transition: .2s
+
+      @include mixins.responsivity-min-width-768px
+        width: 360px
+
+      &:hover
+        background-color: transparent
+        border-radius: 10px
+        padding: 1rem
+        transform: scale(1)
+
+        @include mixins.responsivity-min-width-768px
+          background-color: rgba(0, 0, 0, .2)
+          transform: scale(1.1)
+
+      h2
+        font-size: 2rem
+        color: #ff0062
+        text-shadow: 1px 1px 2px black, -1px -1px 2px black
+
+      p
+        font-size: 1.3rem
+        text-shadow: 1px 1px 1px black, -1px -1px 1px black

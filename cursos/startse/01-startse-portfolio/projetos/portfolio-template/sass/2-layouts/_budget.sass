@@ -1,0 +1,206 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+
+#budget
+  width: 100%
+  height: calc(100vh - 4rem)
+  background-image: url("../img/bg-orcamento.jpg")
+  background-size: cover
+  background-position: center
+  display: flex
+  justify-content: center
+  align-items: center
+
+  @include mixins.responsivity-max-width-770
+    height: 100%
+
+  .container
+    background-color: rgba(255, 255, 255, .6)
+    position: relative
+    border-radius: 10px
+
+    @include mixins.responsivity-max-width-770
+      margin: 5rem .5rem 1rem
+      padding: 1rem
+
+    h1
+      position: absolute
+      top: -2rem
+      left: 2rem
+      width: max-content
+      padding: 0 2rem
+      border-radius: 10px
+      font-family: variables.$primary-font
+      font-weight: 500
+      font-size: 2.5rem
+      color: white
+      background-color: variables.$primary-color
+      background-image: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, .4))
+
+    form
+      padding: 7rem 7rem 5rem
+      display: grid
+      grid-template-columns: auto 1fr
+      grid-row-gap: 2.5rem
+      grid-column-gap: 3rem
+      align-items: center
+      font-family: variables.$secondary-font
+      font-size: 1.5rem
+      font-weight: 500
+
+      @include mixins.responsivity-max-width-770
+        display: flex
+        flex-direction: column
+        padding: 3rem 0 0
+        margin: 0
+
+      input
+        outline: none
+
+      #quantity
+        width: 3.5rem
+        height: 2.5rem
+        border-radius: 10px
+        text-align: center
+        font-family: variables.$secondary-font
+        font-size: 1.5rem
+        font-weight: 500
+        padding: .3rem 0 0 .6rem
+
+      #js
+        visibility: hidden
+
+        &::before
+          visibility: none
+          content: ''
+          width: .7em
+          height: .7em
+          border-radius: 25%
+          display: block
+          background-color: rgb(174, 174, 174)
+          border: 1px solid rgba(0, 0, 0, 1)
+
+        &::after
+          visibility: visible
+          content: ''
+          width: .7em
+          height: .7em
+          border-radius: 25%
+          display: block
+          border: 2px solid rgba(0, 0, 0, 1)
+          transform: translateY(-13px)
+
+        &:checked::after
+          visibility: visible
+          width: .7em
+          height: .72em
+          transform: translateY(-12px)
+          background-color: rgba(0, 0, 0, 0.7)
+
+        &:checked::before
+          visibility: visible
+          content: ''
+          width: 4px
+          height: 8px
+          position: relative
+          top: -2px
+          left: 4px
+          background-color: transparent
+          border-radius: 0
+          border-top: 2px transparent
+          border-right: 2px solid rgba(255, 0, 0)
+          border-bottom: 2px solid rgba(255, 0, 0)
+          border-left: 2px transparent
+          transform: rotate(45deg)
+          z-index: 20
+
+      .layout
+
+        #layout-yes
+          visibility: hidden
+
+          &::before
+            visibility: visible
+            content: ''
+            width: 9px
+            height: 9px
+            background-color: #a7a7a9
+            display: block
+            border: 2px solid black
+            border-radius: 50%
+
+          &:checked::before
+            visibility: visible
+            content: ''
+            width: 9px
+            height: 9px
+            background-color: rgb(255, 0, 0)
+            display: block
+            border: 2px solid black
+            border-radius: 50%
+
+        #layout-no
+          visibility: hidden
+
+          &::before
+            visibility: visible
+            content: ''
+            width: 9px
+            height: 9px
+            background-color: #a7a7a9
+            display: block
+            border: 2px solid black
+            border-radius: 50%
+
+          &:checked::before
+            visibility: visible
+            content: ''
+            width: 9px
+            height: 9px
+            background-color: rgb(255, 0, 0)
+            display: block
+            border: 2px solid black
+            border-radius: 50%
+
+      #deadline
+        width: 25rem
+        -webkit-appearance: none
+
+        @include mixins.responsivity-max-width-770
+          width: 22rem
+
+        &:focus
+          outline: none
+
+        &::-webkit-slider-runnable-track
+          width: 100%
+          height: 8px
+          cursor: pointer
+          transition: .2s
+          box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+          background: rgb(50, 50, 50)
+          border-radius: 10px
+          border: 0px solid #000101
+
+        &::-webkit-slider-thumb
+          box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+          border: 0px solid #000000
+          height: 15px
+          width: 35px
+          border-radius: 7px
+          background: rgb(255, 0, 0)
+          background-image: variables.$gradient-effect
+          cursor: pointer
+          -webkit-appearance: none
+          margin-top: -3px
+
+        &:focus::-webkit-slider-runnable-track
+          background: rgb(75, 75, 75)
+
+      .btn
+        width: 25rem
+
+        @include mixins.responsivity-max-width-770
+          // width: 22rem
+          width: 13rem
+          height: 2.8rem

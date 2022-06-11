@@ -1,0 +1,67 @@
+@use '../1-base/variables'
+@use '../1-base/mixins'
+@use '../3-modules/keyframes'
+
+#presentation
+  background-image: linear-gradient(to top, rgba(0, 0, 0, .9), rgba(0, 0, 0, .4)), url('../img/bg1.jpg')
+  background-position: center
+  background-size: cover
+  position: relative
+
+  .presentation-container
+
+    .text
+
+      h1
+        display: block
+        width: fit-content
+        font-size: 5rem
+        position: relative
+        color: transparent
+        animation: textReveal .5s ease 1.5s forwards
+
+        &:nth-child(1)
+          animation-delay: .8s
+
+        &:nth-child(2)
+          animation-delay: 1.8s
+
+        &:nth-child(3)
+          animation: textRevealName .5s ease forwards
+          animation-delay: 2.8s
+
+        &:nth-child(1) span
+          animation-delay: .5s
+
+        &:nth-child(2) span
+          animation-delay: 1.5s
+
+        &:nth-child(3) span
+          animation-delay: 2.5s
+
+        span
+          position: absolute
+          top: 0
+          left: 0
+          height: 100%
+          width: 0
+          animation: textRevealBox 1s ease .5s
+          background-color: variables.$button-text-color
+
+      .cta
+        display: inline-block
+        padding: 10px 30px
+        color: variables.$button-text-color
+        background-color: transparent
+        border: 2px solid variables.$button-text-color
+        font-size: 2rem
+        text-transform: uppercase
+        letter-spacing: .1rem
+        margin-top: 20px
+        cursor: pointer
+        transition: background-color, color, .5s ease
+
+        &:hover
+          color: variables.$text-color
+          font-weight: 500
+          background-color: variables.$button-text-color
