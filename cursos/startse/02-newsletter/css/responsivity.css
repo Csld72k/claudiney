@@ -30,6 +30,17 @@
     }
 }
 
+@media (max-width: 580px) {
+    #artigos {
+        margin: 1rem;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 630px) {
     .menu-button-container {
         display: flex
@@ -52,7 +63,7 @@
         padding: 0px;
         width: 100%;
         color: white;
-        background-color: #0080ed;
+        background-color: #000;
         border-radius: 5px;
     }
     .menu>li:not(:last-child) {
