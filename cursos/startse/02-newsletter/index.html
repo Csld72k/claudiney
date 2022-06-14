@@ -3,119 +3,271 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StartSe - Newsletter</title>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Newsletter</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/responsivity.css" />
+    <script src="https://kit.fontawesome.com/dfdd3f0741.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <img src="./img/image.png" alt="Logo">
+            <a href="#home">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logo" />
+                    <span>Global Newsletter</span>
+                </div>
+            </a>
             <div class="menu-section">
                 <div class="container-menu">
-                    <input type="checkbox" name="checkbox-menu" id="checkbox-menu">
+                    <input type="checkbox" id="checkbox-menu" />
                     <label class="menu-button-container" for="checkbox-menu">
-                      <span></span>
-                      <span></span>
-                      <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </label>
                     <nav>
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Artigos</a></li>
-                            <li><a href="#">Contato</a></li>
+                        <ul class="menu">
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#artigos">Artigos</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contato</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <main id="container-main">
+    <main id="home">
         <div class="container-main">
-            <div>
-                <h2><span>Instcreva-se agora</span></h2>
-                <h2>na Newsletter</h2>
+            <div class="subscribe">
+                <h2><span>Inscreva-se na</span></h2>
+                <h2>nossa Newsletter</h2>
                 <h3>
-                    Provicando novos começos ocom um conhecimenhto transformar na velocidade do AGORA!
+                    Provocando novos começos com um conhecimento transformador na velocidade do AGORA!
                 </h3>
-                <form action="">
-                    <input type="text" name="nome" id="Nome" placeholder="Nome">
-                    <input type="email" name="email" id="email" placeholder="E-mail">
-                    <input type="submit" value="Enviar">
+                <form>
+                    <input type="text" placeholder="Nome" />
+                    <input type="email" placeholder="E-mail" />
+                    <input type="submit" value="Enviar" />
                 </form>
             </div>
-            <img src="./img/register.webp" alt="Imagem de fundo">
+            <img src="./img/register.png" alt="">
         </div>
     </main>
-    <section class="cards">
-        <div class="card">
-            <div class="image">
-                <img src="./img/unicornio.webp">
-            </div>
-            <div class="content">
-                <p class="tittle text--medium">
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">
-                        57 Min
+    <section id="artigos" class="cards">
+        <a href="artigos/duas-vezes-bia/artigo-duas-vezes-bia.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-duas-vezes-bia.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Duas vezes Bia
                     </p>
+                    <div class="info">
+                        <p class="text--medium">Fez história. Ela conseguiu se colocar, de vez, entre as melhores do mundo do tênis...
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="./img/unicornio.webp">
-            </div>
-            <div class="content">
-                <p class="tittle text--medium">
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">
-                        57 Min
+        </a>
+        <a href="./artigos/lojas-mcdonalds-reabrem-na-russia/lojas-mcdonalds-reabrem-na-russia.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-lojas-mcdonalds-reabrem-na-rússia.jpg" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Lojas do McDonald’s reabrem na Rússia com novo nome
                     </p>
+                    <div class="info">
+                        <p class="text--medium">Boas notícias para os russos amantes de fast-food...</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="./img/unicornio.webp">
-            </div>
-            <div class="content">
-                <p class="tittle text--medium">
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">
-                        57 Min
+        </a>
+        <a href="./artigos/cearenses-podem-se-tornar-piauienses/cearenses-podem-se-tornar-piauienses.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-cearenses-podem-se-tornar-piauienses.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Cearenses podem se tornar piauienses?
                     </p>
+                    <div class="info">
+                        <p class="text--medium">O Ceará e o Piauí estão feito você e seu irmão brigando por quem pegou o pedaço....</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="image">
-                <img src="./img/unicornio.webp">
-            </div>
-            <div class="content">
-                <p class="tittle text--medium">
-                    Com startups mais 'baratas', grandes empresas buscam aquisições
-                </p>
-                <div class="info">
-                    <p class="text--medium">
-                        57 Min
+        </a>
+        <a href="./artigos/telegram-premium-vem-ai/artigo-telegram-premium-vem-ai.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-telegram-premium.jpg" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Telegram Premium vem aí…
                     </p>
+                    <div class="info">
+                        <p class="text--medium">Agora é oficial. O fundador do Telegram anunciou que a versão paga da plataforma será liberada....</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
+        <a href="./artigos/inflacao-nao-da-sossego/artigo-inflacao-nao-da-sossego.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-inflacao-nao-da-sossego.gif" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Essa inflação não dá sossego…
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Juros em alta, bolsas em baixa. A última semana terminou com a divulgação...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/o-pico-da-inflacao-ja-passou/artigo-o-pico-da-inflacao-ja-passou.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-o-pico-da-inflacao-ja-passou.jpeg" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        O pico da inflação já passou?
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Desacelerou. O IPCA — o principal número da inflação, para os leigos...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/o-pais-que-perdeu/artigo-o-pais-que-perdeu.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-o-pais-que-perdeu.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        O país que perdeu 10% da população em 10 anos
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">O cenário de Game of Thrones está perdendo moradores...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/tudo-pode-acontecer/artigo-tudo-pode-acontecer.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-tudo-pode-acontecer.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Tudo pode acontecer
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Neste final de semana a Fórmula 1 aterrissa em Baku, no Azerbaijão. Apesar de ser um circuito de rua....</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/quem-acredita-sempre-alcanca/artigo-quem-acredita-sempre-alcanca.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-quem-acredita-sempre-alcanca.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Quem acredita, sempre alcança
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Saiu o grito. O time da capital do basquete terminou com a hegemonia do Flamengo na...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/alguns-ingleses-vao-ter-que-se-mudar/artigo-alguns-ingleses-vao-ter-que-se-mudar.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-alguns-ingleses-vao-ter-que-se-mudar.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Alguns ingleses vão ter que se mudar
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Parece inevitável. O Reino Unido está alertando que as pessoas que vivem na...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/quais-as-novidades-de-tech/artigo-quais-as-novidades-de-tech.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-quais-as-novidades-de-tech.png" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Quais as novidades de tech?
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Meta de trilhões: Pra quem acha que o metaverso já passou do auge, os analistas indicam que ele está....</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="./artigos/novidades-da-maca/artigo-novidades-da-maca.html">
+            <div class="card">
+                <div class="image">
+                    <img src="./img/artigo-novidades-da-maca.jpg" />
+                </div>
+                <div class="content">
+                    <p class="title">
+                        Novidades da maçã 🍎
+                    </p>
+                    <div class="info">
+                        <p class="text--medium">Os geeks piram. Ontem, aconteceu a abertura da WWDC 2022, a conferência anual para desenvolvedores...</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a class="btn-mais-noticias" href="#"><button>Mais notícias</button></a>
     </section>
-    <section id="form">
-        <div class="desafio">Desafio</div>
-    </section>
+    <footer id="contact">
+        <div class="container">
+            <div class="global-info">
+                <div class="logo">
+                    <img src="img/logo.png" alt="Logo">
+                    <span>Global Newsletter</span>
+                </div>
+                <div class="info">
+                    <span class="bold">receba todos os dias no seu e-mail, às 06:00</span><br>
+                    <span>as principais notícias de mundo, Brasil, tecnologia e do mercado financeiro. somente o que é relevante</span>
+                </div>
+            </div>
+            <div class="copyright">&copy; 2022 Global Newsletter. Todos os direitos reservados</div>
+            <div class="social-media">
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
