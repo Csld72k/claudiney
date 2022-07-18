@@ -331,6 +331,29 @@ AULA 12: COMO DIZER AS HORAS {
   01:30 IT'S HALF PAST ONE
 }
 
+????????????????????????????????????????
+
+AULA 16: VERBOS REGULARES NO PASSADO {
+  * PALAVRAS QUE TERMINAM COM A LETRA 'K', AO COLOCAR O VERBO NO PASSADO A PRONÚNCIA DO 'KED' FICA COMO SE TIVESSE UMA TESOURA CORTANDO UM PANO (SOM DE 'KT')
+    TO WORK                     TO WORK
+  I       WORK              I       WORKED
+  YOU     WORK              YOU     WORKED
+  HE      WORKS             HE      WORKED
+  SHE     WORKS             SHE     WORKED
+  IT      WORKS             IT      WORKED
+  WE      WORK              WE      WORKED
+  YOU     WORK              YOU     WORKED
+  THEY    WORK              THEY    WORKED
+
+  TO TALK         TALKED
+  TO LOVE         LOVED
+  TO PLAY         PLAYED
+  TO STUDY        STUDIED
+  TO STOP         STOPPED
+  TO OPEN         OPENED
+  TO LISTEN       LISTENED
+}
+
 **QUANDO CHEGAR NA AULA 40 ==> REASSISTIR A AULA AO VIVO 08: PALAVRAS COM PRESENT PERFECT
 
 ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     ||     AULAS AO VIVO     ||     ||     ||     ||     ||     ||     ||
