@@ -28,7 +28,7 @@ body {
 }
 
 .content {
-  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 99 PARA 100/ DE 98 PARA 100/ DE 71 PARA 65 */
+  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 99 PARA 100/ DE 98 PARA 100/ DE 71 PARA 70 */
   padding: 70px 100px 0;
   width: 1280px;
   margin: 0 auto;
@@ -72,6 +72,7 @@ main section {
 
 main h2 {
   /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 59 PARA 60 */
+  width: 614px;
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 60px;
