@@ -31,9 +31,7 @@ body {
   /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 99 PARA 100/ DE 98 PARA 100/ DE 71 PARA 65 */
   padding: 70px 100px 0;
   width: 1280px;
-  /* height: 720px; */
   margin: 0 auto;
-  /* background: var(--color-1); */
   position: relative;
 
 }
@@ -64,7 +62,6 @@ header a:hover {
 main {
   /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 77 PARA 75/ de 157 para 160 */
   display: flex;
-  /* justify-content: space-between; */
   gap: 75px;
   margin-bottom: 160px;
 }
