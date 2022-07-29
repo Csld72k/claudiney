@@ -1,0 +1,132 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-1: #2F2E41;
+  --color-2: #00BFA6;
+  --color-3: #C2C2C2;
+  --color-4: #FFFFFF;
+  --font-2: 'Open Sans', sans-serif;
+  --font-1: 'JetBrains Mono', monospace;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: var(--color-1);
+  color: var(--color-4);
+  font-family: var(--font-1);
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.content {
+  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 99 PARA 100/ DE 98 PARA 100/ DE 71 PARA 70 */
+  padding: 70px 100px 0;
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+header {
+  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 101 PARA 100 */
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header ul {
+  display: flex;
+  gap: 64px;
+}
+
+header a {
+  color: var(--color-3);
+}
+
+header a:hover {
+  font-weight: bold;
+  color: var(--color-2);
+  transition: .5s;
+}
+
+main {
+  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 77 PARA 75/ de 157 para 160 */
+  display: flex;
+  gap: 75px;
+  margin-bottom: 160px;
+}
+
+main section {
+  max-width: 605px;
+}
+
+main h2 {
+  /* ARREDONDEI AS MEDIDAS PRESENTES NO FIGMA. DE 59 PARA 60 */
+  width: 614px;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+main span {
+  color: var(--color-2);
+}
+
+main p {
+  font-family: var(--font-2);
+  color: var(--color-3);
+}
+
+main p span {
+  font-weight: bold;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  width: 568px;
+  padding-top: 25px;
+  color: color;
+  border-top: 1px solid var(--color-2);
+}
+
+footer a {
+  color: var(--color-4);
+}
+
+footer a:hover {
+  color: var(--color-2);
+  font-weight: bold;
+  transition: .5s;
+}
+
+.padlock {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-height: 721px) {
+  .content {
+    padding-top: 100px;
+  }
+}
+
+@media (min-height: 800px) {
+  .content {
+    padding-top: 150px;
+  }
+}
