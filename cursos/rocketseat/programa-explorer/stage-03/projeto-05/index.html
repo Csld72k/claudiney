@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentoria - Formulário de Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>Mentoria</h1>
+    <p>Preencha o formulário abaixo para agendar a sua mentoria.</p>
+  </header>
+
+  <form>
+
+    <fieldset>
+
+      <legend>Informações Pessoais</legend>
+
+      <div class="input-wrapper">
+        <label for="name">Nome</label>
+        <input type="text" id="name">
+        <label for="last-name">Sobrenome</label>
+        <input type="text" id="last-name">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="input-wrapper">
+        <label for="password">Senha</label>
+        <input type="password" id="password">
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Informações do Mentor</legend>
+
+      <div class="input-wrapper">
+        <label for="mentorship-name">Nome do seu mentor</label>
+        <input type="text" id="mentorship-name">
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+
+      <legend>Seus horários disponíveis</legend>
+
+      <div class="input-wrapper">
+        <span>Primeira Mentoria</span>
+        <label for="first-mentorship-date">Data</label>
+        <input type="date" id="first-mentorship-date">
+        <label for="first-mentorship-from">Das</label>
+        <input type="time" id="first-mentorship-from">
+        <label for="first-mentorship-to">Até</label>
+        <input type="time" id="first-mentorship-to">
+      </div>
+
+      <div class="input-wrapper">
+        <span>Segunda Mentoria</span>
+        <label for="second-mentorship-date">Data</label>
+        <input type="date" id="second-mentorship-date">
+        <label for="second-mentorship-from">Das</label>
+        <input type="time" id="second-mentorship-from">
+        <label for="second-mentorship-to">Até</label>
+        <input type="time" id="second-mentorship-to">
+      </div>
+
+    </fieldset>
+
+  </form>
+
+  <footer>
+    <input type="submit" value="Salvar">
+  </footer>
+
+</body>
+
+</html>
