@@ -67,7 +67,6 @@ header {
 
 form {
   width: 75rem;
-  /* height: 108.4rem; */
   background-color: var(--white);
   margin-top: 32.2rem;
   padding: 6.4rem;
@@ -81,7 +80,6 @@ form {
 legend {
   width: 100%;
   font-size: 2.4rem;
-  /* color: var(--primary-color); */
   padding-bottom: 1.6rem;
   border-bottom: 1px solid var(--border-color);
   margin-bottom: 3.6rem;
@@ -89,7 +87,6 @@ legend {
 
 .input-wrapper {
   width: 100%;
-  /* display: flex; */
 }
 
 form label {
@@ -119,7 +116,6 @@ fieldset h2 {
 .input-wrapper.name {
   display: flex;
   gap: 2.2rem;
-  /* display: none; */
 }
 
 .name {
@@ -175,12 +171,3 @@ footer input:hover {
   background-color: #e04f6c;
   cursor: pointer;
 }
-
-
-
-/*
-
-font-family: 'Poppins', sans-serif;
-font-family: 'Staatliches', cursive;
-
-*/
