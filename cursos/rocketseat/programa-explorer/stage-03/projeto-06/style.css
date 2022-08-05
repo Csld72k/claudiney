@@ -25,6 +25,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+input, textarea, select {
+  padding: 0 1.5rem;
+}
+
 h1, legend, input[type=submit] {
   font-family: 'Staatliches', cursive;
 }
