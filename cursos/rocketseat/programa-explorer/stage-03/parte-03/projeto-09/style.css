@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-1: #5C6981;
+  --color-2: #8E9AAF;
+  --color-3: #CBC0D3;
+  --color-4: #FEEAFA;
+  --color-5: #EFF1FF;
+  --primary-font: 'Staatliches', cursive;
+  --secondary-font: 'Palanquin', sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+header .wrapper {
+  width: 100%;
+  padding-bottom: 2.9rem;
+
+  background: var(--color-2);
+}
+
+header .wrapper figure img {
+  margin: 3.2rem 0;
+}
+
+header .wrapper h1 {
+  padding: .7rem 0;
+
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--color-5);
+
+  background: var(--color-3);
+}
+
+header p {
+  max-width: 30.5rem;
+  margin: 1.4rem 4rem 2.6rem;
+
+  font-family: var(--secondary-font);
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1.4rem;
+  color: var(--color-1);
+  /* font-size: 2rem; */
+}
+
+main {
+  padding: 0 3.2rem 2.4rem;
+}
+
+main figure {
+  position: relative;
+
+  width: fit-content;
+  margin: 3.2rem auto;
+
+  border-radius: 2rem;
+
+  cursor: pointer;
+  overflow: hidden;
+
+}
+
+main figure img {
+  width: 32rem;
+
+  transition: .2s;
+  animation: upToDown 1s;
+}
+
+main figure:hover img {
+  transform: scale(1.1);
+}
+
+main figure figcaption {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin: 1.6rem 1.6rem 0 0;
+  padding: 0 2.4rem;
+
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--color-1);
+
+  background: var(--color-4);
+  border-radius: 2rem;
+
+  animation: downToUp 1s .3s backwards;
+}
+
+footer {
+  margin-bottom: 4rem;
+
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: var(--color-1);
+}
+
+footer a {
+  color: var(--color-1);
+}
+
+footer a:hover {
+  color: #3f66ad;
+}
+
+@keyframes upToDown {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes downToUp {
+  0% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    width: fit-content;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 37.7rem;
+    height: 100vh;
+
+    background: var(--color-2);
+  }
+
+  header .wrapper {}
+
+  header .wrapper figure img {}
+
+  header .wrapper h1 {
+    padding: 2rem 0;
+
+    font-size: 4.8rem;
+    letter-spacing: 0;
+
+  }
+
+  header p {
+    max-width: 27.5rem;
+
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: var(--color-5);
+  }
+
+  main {
+    width: fit-content;
+    height: 100vh;
+    /* max-width: 65%; */
+    display: grid;
+    grid-template-areas:
+      "paletas shakes paletas2"
+      "picoles shakes picoles2"
+      "picoles massas picoles2"
+      "footer footer footer";
+    gap: 3.2rem;
+
+    padding: 5.4rem 5.4rem 12.4rem;
+  }
+
+  main a {}
+
+  main a:nth-child(1) {
+    grid-area: paletas;
+  }
+
+  main a:nth-child(2) {
+    grid-area: shakes;
+  }
+
+  main a:nth-child(3) {
+    grid-area: massas;
+  }
+
+  main a:nth-child(4) {
+    grid-area: picoles;
+  }
+
+  main a:nth-child(5) {
+    grid-area: paletas2;
+  }
+
+  main a:nth-child(6) {
+    grid-area: picoles2;
+  }
+
+  main figure {
+    margin: 0;
+  }
+
+  main figure img {
+    width: 22rem;
+  }
+
+  main figure:hover img {}
+
+  main figure figcaption {}
+
+  footer {
+    grid-area: footer;
+    /* position: absolute;
+    bottom: 0;
+    left: 50%; */
+
+    text-align: center;
+
+    /* width: 85rem; */
+  }
+
+  footer a {}
+
+  footer a:hover {}
+}
+
+@media (min-width: 1450px) {
+  body {
+    /* margin-left: 10rem; */
+    /* margin-top: 10rem; */
+    gap: 25rem;
+  }
+
+  main {
+    height: 40rem;
+    margin-top: 10rem;
+    gap: 6.4rem;
+    padding: 0;
+  }
+
+  main figure img {
+    width: 25rem;
+  }
+
+  footer {
+    margin-bottom: 0;
+  }
+}
