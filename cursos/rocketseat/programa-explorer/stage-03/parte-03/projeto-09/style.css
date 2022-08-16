@@ -64,7 +64,6 @@ header p {
   line-height: 1.5rem;
   font-size: 1.4rem;
   color: var(--color-1);
-  /* font-size: 2rem; */
 }
 
 main {
@@ -169,10 +168,6 @@ footer a:hover {
     background: var(--color-2);
   }
 
-  header .wrapper {}
-
-  header .wrapper figure img {}
-
   header .wrapper h1 {
     padding: 2rem 0;
 
@@ -192,7 +187,6 @@ footer a:hover {
   main {
     width: fit-content;
     height: 100vh;
-    /* max-width: 65%; */
     display: grid;
     grid-template-areas:
       "paletas shakes paletas2"
@@ -203,8 +197,6 @@ footer a:hover {
 
     padding: 5.4rem 5.4rem 12.4rem;
   }
-
-  main a {}
 
   main a:nth-child(1) {
     grid-area: paletas;
@@ -238,30 +230,14 @@ footer a:hover {
     width: 22rem;
   }
 
-  main figure:hover img {}
-
-  main figure figcaption {}
-
   footer {
     grid-area: footer;
-    /* position: absolute;
-    bottom: 0;
-    left: 50%; */
-
     text-align: center;
-
-    /* width: 85rem; */
   }
-
-  footer a {}
-
-  footer a:hover {}
 }
 
 @media (min-width: 1450px) {
   body {
-    /* margin-left: 10rem; */
-    /* margin-top: 10rem; */
     gap: 25rem;
   }
 
