@@ -12,3 +12,8 @@ O que estou aprendendo de ferramentas do JS:
 [] Concatenação;
 [] Tipos de dados: String;
 [] Conceitos básicos de sintaxe;
+
+Notes {
+  * alert() => Cria uma janela de mensagem na tela;
+  * prompt() => Cria uma janela de mensagem na tela com entrada de texto;
+}

@@ -16,3 +16,9 @@ Boas práticas na escrita de variáveis:
  [] String() (função construtora para converter um dado em string);
 [] Ordem de precedência dos operadores;
 [] Group operator;
+
+Notes {
+  * Number() => Transforma os dados para o tipo numérico;
+  * String() => Transforma os dados para o tipo string;
+  * typeOf() => Retorna o tipo de dado do elemento;
+}
