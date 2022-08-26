@@ -1,7 +1,9 @@
 /*
 Solicitar o nome do aluno e as 3 notas do bimestre e calcular a média daquele aluno;
 
-A média positiva deverá ser maior ou igual a 6;
+A média para aprovado deverá ser maior ou igual a 6;
+A média para recuperação deverá ser maior ou igual a 4 e menor que 6;
+A média para reprovado deverá ser menor do que 3;
 
 Se o aluno passou no bimestre, dar os parabéns;
 
@@ -17,11 +19,13 @@ let n3 = prompt('Qual a nota da terceira prova?');
 
 let average = (Number(n1) + Number(n2) + Number(n3)) / 3;
 
-let result = average > 6;
+let result = average >= 6;
 
 average = average.toFixed(2);
 
 if (result)
-  alert('Parabéns ' + student + '! Sua média foi ' + average);
+  alert('Parabéns ' + student + '! Aprovadi com média ' + average);
+else if (average < 3)
+  alert('Média ' + average + ', reprovado!')
 else
   alert(student + ' estude para sua prova de recuperação! Sua média foi ' + average);
