@@ -10,5 +10,3 @@
   - Tipo de dado estruturado;
 [] Incremental (++): o valor + 1;
 [] Tipos de dados: undefined;
-
-# Notes

@@ -1,7 +1,7 @@
 /*
-Capture 10 iten para compor a lista de um supermercado;
+  Capture 10 iten para compor a lista de um supermercado;
 
-Após capturar os 10 itens, imprima-os, separando por vírgula;
+  Após capturar os 10 itens, imprima-os, separando por vírgula;
 */
 
 let supermarketList = []

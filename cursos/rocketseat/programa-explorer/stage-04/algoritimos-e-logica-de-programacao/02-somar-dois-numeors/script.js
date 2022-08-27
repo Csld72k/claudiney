@@ -1,5 +1,5 @@
 /*
-Solicite 2 números, faça a soma deles e apresente o resultado final ao usuário;
+  Solicite 2 números, faça a soma deles e apresente o resultado final ao usuário;
 */
 
 alert('Iremos somar 2 números');
