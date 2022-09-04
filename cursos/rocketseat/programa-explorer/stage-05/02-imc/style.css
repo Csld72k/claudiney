@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  /* colors */
+  --heading-text-color: #0c3440;
+
+  --label-text-color: #00453a;
+
+  --input-text-color: #212529;
+  --input-background-color: #dce2e9;
+  --inpuit-outline-color: #02799d;
+  --input-border-color: #4950574d;
+  --placeholder-text-color: #49505780;
+
+  --button-text-color: #fff;
+  --button-background-color: #02799d;
+  --button-background-color-hover: #01475c;
+
+  --error-text-color: #fff;
+  --error-background-color: #f03e3e;
+
+
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #040924;
+}
+
+body, input, button {
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  max-width: 42.8rem;
+  margin-inline: auto;
+  padding: 4.8rem 6.4rem 6.4rem;
+
+  background-color: #fff;
+  border-radius: .6rem;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .1);
+}
+
+.title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+
+  color: var(--heading-text-color);
+}
+
+form {
+  width: 30rem;
+}
+
+form h1 {
+  margin-bottom: 3.2rem;
+}
+
+form label {
+  margin-bottom: .8rem;
+  display: block;
+
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+
+  color: var(--label-text-color);
+}
+
+form input {
+  width: 100%;
+  padding: 1.6rem;
+
+  border: 1px solid var(--input-border-color);
+  border-radius: .4rem;
+  background-color: var(--input-background-color);
+}
+
+form input:focus {
+  outline: 2px solid var(--inpuit-outline-color);
+}
+
+form input::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.input-wrapper+.input-wrapper {
+  margin-top: 1.6rem;
+}
+
+form button {
+  width: 100%;
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  font-weight: bold;
+
+  border: none;
+  border-radius: .4rem;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+form button:hover {
+  background-color: var(--button-background-color-hover);
+}
+
+/* modal */
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  background-color: rgba(0, 0, 0, .7);
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+  transition: transform .3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
+}
+
+/* alert error */
+.alert-error.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  padding: .8rem 0;
+
+  font-weight: bold;
+  text-align: center;
+
+  background-color: var(--error-background-color);
+  color: var(--error-text-color);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: transform .5s;
+}
