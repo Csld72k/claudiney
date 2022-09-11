@@ -3,7 +3,8 @@ export default function Timer({
   displaySeconds,
   hideButtonPause,
   cantReduce,
-  canReduce
+  canReduce,
+  pauseSounds
 }) {
 
   let minutes = Number(displayMinutes.textContent);
@@ -60,12 +61,13 @@ export default function Timer({
         updateSecondsDisplay('00');
         pause();
         hideButtonPause();
+        pauseSounds();
         return
       }
 
 
       if (newSeconds <= 0) {
-        newSeconds = 4;
+        newSeconds = 60;
         --minutes;
       }
 

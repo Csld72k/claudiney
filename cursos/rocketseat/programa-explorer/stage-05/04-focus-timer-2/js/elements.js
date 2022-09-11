@@ -9,6 +9,10 @@ const buttonForestSound = document.querySelector('.forest');
 const buttonRainSound = document.querySelector('.rain');
 const buttonCoffeShopSound = document.querySelector('.coffee-shop');
 const buttonFireplaceSound = document.querySelector('.fireplace');
+const forestCheckbox = document.querySelector('#forest');
+const rainCheckbox = document.querySelector('#rain');
+const coffeeShopCheckbox = document.querySelector('#coffee-shop');
+const fireplaceCheckbox = document.querySelector('#fireplace');
 
 export const Elements = {
   displayMinutes,
@@ -21,5 +25,9 @@ export const Elements = {
   buttonForestSound,
   buttonRainSound,
   buttonCoffeShopSound,
-  buttonFireplaceSound
+  buttonFireplaceSound,
+  forestCheckbox,
+  rainCheckbox,
+  coffeeShopCheckbox,
+  fireplaceCheckbox
 }

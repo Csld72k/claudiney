@@ -85,7 +85,6 @@ export default function Events(controls, timer, sound) {
 
   }
 
-
   buttonPlay.addEventListener('click', playTimer);
   buttonPause.addEventListener('click', pauseTimer);
   buttonStop.addEventListener('click', stopTimer);

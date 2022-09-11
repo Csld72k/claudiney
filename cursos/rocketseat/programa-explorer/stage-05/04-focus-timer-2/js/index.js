@@ -18,6 +18,8 @@ const {
   buttonFireplaceSound
 } = Elements;
 
+const sound = Sounds();
+
 const controls = Controls({
   buttonPlay,
   buttonPause,
@@ -27,7 +29,11 @@ const controls = Controls({
   buttonForestSound,
   buttonRainSound,
   buttonCoffeShopSound,
-  buttonFireplaceSound
+  buttonFireplaceSound,
+  playForestSound: sound.playForestSound,
+  playRainSound: sound.playRainSound,
+  playCoffeeShopSound: sound.playCoffeeShopSound,
+  playFireplaceSound: sound.playFireplaceSound
 });
 
 const timer = Timer({
@@ -36,8 +42,7 @@ const timer = Timer({
   hideButtonPause: controls.hideButtonPause,
   cantReduce: controls.cantReduce,
   canReduce: controls.canReduce,
+  pauseSounds: controls.pauseSounds
 });
-
-const sound = Sounds();
 
 Events(controls, timer, sound);

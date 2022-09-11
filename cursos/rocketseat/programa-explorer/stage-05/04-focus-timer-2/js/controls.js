@@ -1,12 +1,29 @@
 import { Elements } from './elements.js'
+// import { Events } from './events.js'
 
 const {
   buttonPlay,
   buttonPause,
-  buttonReduce
+  buttonReduce,
+  forestCheckbox,
+  rainCheckbox,
+  coffeeShopCheckbox,
+  fireplaceCheckbox
 } = Elements
 
-export default function Controls() {
+// const {
+//   forestSound,
+//   rainSound,
+//   coffeeShopSound,
+//   fireplaceSound
+// } = Events
+
+export default function Controls({
+  playForestSound,
+  playRainSound,
+  playCoffeeShopSound,
+  playFireplaceSound
+}) {
 
   function hideButtonPlay() {
 
@@ -39,7 +56,7 @@ export default function Controls() {
   function toggleCheckboxCheckedTrueFalse(id) {
     let inputCheckbox = document.querySelector(id);
     let toggleCheckboxCheckedTrueFalse = inputCheckbox;
-    toggleCheckboxCheckedTrueFalse.checked === true ? toggleCheckboxCheckedTrueFalse.checked = false : toggleCheckboxCheckedTrueFalse.checked = true
+    toggleCheckboxCheckedTrueFalse.checked === true ? toggleCheckboxCheckedTrueFalse.checked = false : toggleCheckboxCheckedTrueFalse.checked = true;
   }
 
   function forestButton() {
@@ -70,6 +87,29 @@ export default function Controls() {
 
   }
 
+  function pauseSounds() {
+
+    if (forestCheckbox.checked) {
+      forestButton();
+      playForestSound();
+    }
+
+    if (rainCheckbox.checked) {
+      rainButton();
+      playRainSound();
+    }
+
+    if (coffeeShopCheckbox.checked) {
+      coffeeShopButton();
+      playCoffeeShopSound();
+    }
+
+    if (fireplaceCheckbox.checked) {
+      fireplaceButton();
+      playFireplaceSound();
+    }
+
+  }
 
   return {
     hideButtonPlay,
@@ -79,7 +119,8 @@ export default function Controls() {
     forestButton,
     rainButton,
     coffeeShopButton,
-    fireplaceButton
+    fireplaceButton,
+    pauseSounds
   }
 
 }

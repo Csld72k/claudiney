@@ -1,10 +1,11 @@
 export default function Sounds() {
 
 
-  const forest = new Audio('');
-  const rain = new Audio('');
-  const coffeeShop = new Audio('');
-  const fireplace = new Audio('');
+  const forest = new Audio('https://github.com/Csld72k/claudiney/blob/master/cursos/rocketseat/programa-explorer/stage-05/04-focus-timer-2/sounds/Floresta.wav?raw=true');
+  // const rain = new Audio('https://drive.google.com/u/0/uc?id=1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2&export=download');
+  const rain = new Audio('https://drive.google.com/u/0/uc?id=1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2&export=download');
+  const coffeeShop = new Audio('https://github.com/Csld72k/claudiney/blob/master/cursos/rocketseat/programa-explorer/stage-05/04-focus-timer-2/sounds/Cafeteria.wav?raw=true');
+  const fireplace = new Audio('https://github.com/Csld72k/claudiney/blob/master/cursos/rocketseat/programa-explorer/stage-05/04-focus-timer-2/sounds/Lareira.wav?raw=true');
 
   forest.loop = true;
   rain.loop = true;
@@ -14,25 +15,25 @@ export default function Sounds() {
   function playForestSound() {
 
     let forestCheckbox = document.querySelector('#forest');
-    forestCheckbox.checked == true ? forest.play() : forest.pause();
+    forestCheckbox.checked === true ? forest.play() : forest.pause();
 
   }
   function playRainSound() {
 
     let rainCheckbox = document.querySelector('#rain');
-    rainCheckbox.checked == true ? rain.play() : rain.pause();
+    rainCheckbox.checked === true ? rain.play() : rain.pause();
 
   }
   function playCoffeeShopSound() {
 
     let coffeeShopCheckbox = document.querySelector('#coffee-shop');
-    coffeeShopCheckbox.checked == true ? coffeeShop.play() : coffeeShop.pause();
+    coffeeShopCheckbox.checked === true ? coffeeShop.play() : coffeeShop.pause();
 
   }
   function playFireplaceSound() {
 
     let fireplaceCheckbox = document.querySelector('#fireplace');
-    fireplaceCheckbox.checked == true ? fireplace.play() : fireplace.pause();
+    fireplaceCheckbox.checked === true ? fireplace.play() : fireplace.pause();
 
   }
 
