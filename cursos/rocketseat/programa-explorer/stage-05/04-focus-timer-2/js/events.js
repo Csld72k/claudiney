@@ -1,4 +1,3 @@
-import Controls from './controls.js';
 import { Elements } from './elements.js';
 const {
   displayMinutes,
@@ -42,7 +41,6 @@ export default function Events(controls, timer, sound) {
 
   function addTime() {
 
-    // let currentMinute = timer.returnCurrentsMinutes();
     let currentMinute = Number(displayMinutes.textContent);
     currentMinute += 5;
     timer.updateMinutesDisplay(currentMinute);

@@ -42,7 +42,8 @@ const timer = Timer({
   hideButtonPause: controls.hideButtonPause,
   cantReduce: controls.cantReduce,
   canReduce: controls.canReduce,
-  pauseSounds: controls.pauseSounds
+  pauseSounds: controls.pauseSounds,
+  finishTimer: sound.finishTimer
 });
 
 Events(controls, timer, sound);

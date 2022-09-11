@@ -4,7 +4,8 @@ export default function Timer({
   hideButtonPause,
   cantReduce,
   canReduce,
-  pauseSounds
+  pauseSounds,
+  finishTimer
 }) {
 
   let minutes = Number(displayMinutes.textContent);
@@ -27,14 +28,6 @@ export default function Timer({
     updateSecondsDisplay('00');
   }
 
-  // function returnCurrentMinutes(newMinutes) {
-
-  //   // newMinutes += 5;
-  //   // updateMinutesDisplay(newMinutes);
-  //   return newMinutes
-
-  // }
-
   setInterval(() => {
     let minutes = displayMinutes.textContent;
     if (minutes < 5) cantReduce();
@@ -44,8 +37,6 @@ export default function Timer({
   function countdown() {
 
     let seconds = Number(displaySeconds.textContent);
-    // let minutes = Number(displayMinutes.textContent);
-    // let newMinutes = minutes;
     let newSeconds = seconds;
 
     timerInterval = setInterval(() => {
@@ -55,13 +46,11 @@ export default function Timer({
 
 
       if (isFinished) {
-        // reset();
-        // console.log(minutes)
-        // updateMinutesDisplay(minutes);
         updateSecondsDisplay('00');
         pause();
         hideButtonPause();
         pauseSounds();
+        finishTimer();
         return
       }
 
@@ -73,12 +62,8 @@ export default function Timer({
 
       --newSeconds;
 
-      // if (minutes < 5) cantReduce();
-      // else canReduce();
-
       updateMinutesDisplay(minutes);
       updateSecondsDisplay(newSeconds);
-      // returnCurrentMinutes(minutes);
 
     }, 1000);
 
@@ -109,7 +94,6 @@ export default function Timer({
     pause,
     stop,
     reset,
-    // returnCurrentMinutes
   }
 
 }

@@ -1,5 +1,4 @@
 import { Elements } from './elements.js'
-// import { Events } from './events.js'
 
 const {
   buttonPlay,
@@ -10,13 +9,6 @@ const {
   coffeeShopCheckbox,
   fireplaceCheckbox
 } = Elements
-
-// const {
-//   forestSound,
-//   rainSound,
-//   coffeeShopSound,
-//   fireplaceSound
-// } = Events
 
 export default function Controls({
   playForestSound,
@@ -62,7 +54,6 @@ export default function Controls({
   function forestButton() {
 
     toggleCheckboxCheckedTrueFalse('#forest');
-    // if ()
 
   }
 
