@@ -1,117 +1,62 @@
-import { Elements } from './elements.js'
-
-const {
+export default function Controls({
   buttonPlay,
   buttonPause,
-  buttonReduce,
-  forestCheckbox,
-  rainCheckbox,
-  coffeeShopCheckbox,
-  fireplaceCheckbox
-} = Elements
-
-export default function Controls({
-  playForestSound,
-  playRainSound,
-  playCoffeeShopSound,
-  playFireplaceSound
+  buttonReduce
 }) {
 
-  function hideButtonPlay() {
+  function disableAndEnableButtonReduce(minutes) {
+
+    if (minutes < 5) {
+      buttonReduce.disabled = true;
+      buttonReduce.classList.add('cant-reduce');
+    }
+    else {
+      buttonReduce.disabled = false;
+      buttonReduce.classList.remove('cant-reduce');
+    }
+  }
+
+  function hidePlayAndShowPause() {
 
     buttonPlay.classList.add('hide');
     buttonPause.classList.remove('hide');
 
   }
 
-  function hideButtonPause() {
+  function hidePauseAndShowPlay() {
 
     buttonPlay.classList.remove('hide');
     buttonPause.classList.add('hide');
 
   }
 
-  function cantReduce() {
+  function checkedTrueToFalse(inputCheckbox) {
 
-    buttonReduce.disabled = true
-    buttonReduce.classList.add('cant-reduce');
-
-  }
-
-  function canReduce() {
-
-    buttonReduce.disabled = false
-    buttonReduce.classList.remove('cant-reduce');
+    inputCheckbox.checked = false;
+    inputCheckbox.classList.add('selected');
 
   }
 
-  function toggleCheckboxCheckedTrueFalse(id) {
-    let inputCheckbox = document.querySelector(id);
-    let toggleCheckboxCheckedTrueFalse = inputCheckbox;
-    toggleCheckboxCheckedTrueFalse.checked === true ? toggleCheckboxCheckedTrueFalse.checked = false : toggleCheckboxCheckedTrueFalse.checked = true;
-  }
+  function checkedFalseToTrue(inputCheckbox) {
 
-  function forestButton() {
-
-    toggleCheckboxCheckedTrueFalse('#forest');
+    inputCheckbox.checked = true;
+    inputCheckbox.classList.remove('selected');
 
   }
 
-  function rainButton() {
+  function toggleCheckboxCheckedTrueFalse(elementId) {
 
-    toggleCheckboxCheckedTrueFalse('#rain');
+    let inputCheckbox = document.querySelector(elementId);
 
-
-  }
-
-  function coffeeShopButton() {
-
-    toggleCheckboxCheckedTrueFalse('#coffee-shop');
-
-
-  }
-
-  function fireplaceButton() {
-
-    toggleCheckboxCheckedTrueFalse('#fireplace');
-
-
-  }
-
-  function pauseSounds() {
-
-    if (forestCheckbox.checked) {
-      forestButton();
-      playForestSound();
-    }
-
-    if (rainCheckbox.checked) {
-      rainButton();
-      playRainSound();
-    }
-
-    if (coffeeShopCheckbox.checked) {
-      coffeeShopButton();
-      playCoffeeShopSound();
-    }
-
-    if (fireplaceCheckbox.checked) {
-      fireplaceButton();
-      playFireplaceSound();
-    }
+    inputCheckbox.checked === true ? checkedTrueToFalse(inputCheckbox) : checkedFalseToTrue(inputCheckbox);
 
   }
 
   return {
-    hideButtonPlay,
-    hideButtonPause,
-    cantReduce,
-    canReduce,
-    forestButton,
-    rainButton,
-    coffeeShopButton,
-    fireplaceButton,
-    pauseSounds
+    hidePlayAndShowPause,
+    hidePauseAndShowPlay,
+    disableAndEnableButtonReduce,
+    toggleCheckboxCheckedTrueFalse
   }
 
 }

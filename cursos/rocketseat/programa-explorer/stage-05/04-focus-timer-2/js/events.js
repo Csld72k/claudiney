@@ -1,96 +1,101 @@
-import { Elements } from './elements.js';
+import { Elements } from "./elements.js";
+
 const {
-  displayMinutes,
-  displaySeconds,
+  secondsDisplay,
+  minutesDisplay,
+  buttonForest,
+  buttonRain,
+  buttonCoffeeShop,
+  buttonFireplace,
   buttonPlay,
   buttonPause,
   buttonStop,
   buttonAdd,
-  buttonReduce,
-  buttonForestSound,
-  buttonRainSound,
-  buttonCoffeShopSound,
-  buttonFireplaceSound
-} = Elements;
+  buttonReduce
+} = Elements
 
-export default function Events(controls, timer, sound) {
+export default function Events({ controls, timer, sound }) {
 
-  function playTimer() {
+  function play() {
 
-    if (displayMinutes.textContent > 0 || displaySeconds.textContent > 0) {
+    let minutes = Number(minutesDisplay.textContent);
+    let seconds = Number(secondsDisplay.textContent);
+
+    if (minutes > 1 || seconds > 1) {
       timer.countdown();
-      controls.hideButtonPlay();
+      controls.hidePlayAndShowPause();
     }
 
   }
 
-  function pauseTimer() {
+  function pause() {
 
-    timer.pause();
-    controls.hideButtonPause();
-
-  }
-
-  function stopTimer() {
-
-    timer.pause();
-    controls.hideButtonPause();
-    timer.stop();
+    timer.pauseCountdown();
+    controls.hidePauseAndShowPlay();
 
   }
 
-  function addTime() {
+  function stop() {
 
-    let currentMinute = Number(displayMinutes.textContent);
-    currentMinute += 5;
-    timer.updateMinutesDisplay(currentMinute);
+    timer.resetCountdown();
+    controls.hidePauseAndShowPlay();
+
+  }
+  function add() {
+
+    let minutes = Number(minutesDisplay.textContent);
+    let newMinutes = minutes + 5;
+
+    minutesDisplay.innerText = String(newMinutes).padStart(2, '0');
+    controls.disableAndEnableButtonReduce(newMinutes);
+
+  }
+  function reduce() {
+
+    let minutes = Number(minutesDisplay.textContent);
+    let seconds = Number(secondsDisplay.textContent);
+    let newMinutes = minutes - 5;
+
+    minutesDisplay.innerText = String(newMinutes).padStart(2, '0');
+    controls.disableAndEnableButtonReduce(newMinutes);
+    timer.isFinished(newMinutes, seconds);
+  }
+  function forest() {
+
+    controls.toggleCheckboxCheckedTrueFalse('#forest');
+    sound.onOffForestSound('#forest');
 
   }
 
-  function reduceTime() {
+  function rain() {
 
-    let currentMinute = Number(displayMinutes.textContent);
-    currentMinute -= 5;
-    timer.updateMinutesDisplay(currentMinute);
-
-  }
-
-  function forestSound() {
-
-    controls.forestButton();
-    sound.playForestSound();
+    controls.toggleCheckboxCheckedTrueFalse('#rain');
+    sound.onOffRainSound('#rain');
 
   }
 
-  function rainSound() {
+  function coffeeShop() {
 
-    controls.rainButton();
-    sound.playRainSound();
-
-  }
-
-  function coffeeShopSound() {
-
-    controls.coffeeShopButton();
-    sound.playCoffeeShopSound();
+    controls.toggleCheckboxCheckedTrueFalse('#coffee-shop');
+    sound.onOffCoffeeShopSound('#coffee-shop');
 
   }
 
-  function fireplaceSound() {
+  function fireplace() {
 
-    controls.fireplaceButton();
-    sound.playFireplaceSound();
+    controls.toggleCheckboxCheckedTrueFalse('#fireplace');
+    sound.onOffFireplaceSound('#fireplace');
 
   }
 
-  buttonPlay.addEventListener('click', playTimer);
-  buttonPause.addEventListener('click', pauseTimer);
-  buttonStop.addEventListener('click', stopTimer);
-  buttonAdd.addEventListener('click', addTime);
-  buttonReduce.addEventListener('click', reduceTime);
-  buttonForestSound.addEventListener('click', forestSound);
-  buttonRainSound.addEventListener('click', rainSound);
-  buttonCoffeShopSound.addEventListener('click', coffeeShopSound);
-  buttonFireplaceSound.addEventListener('click', fireplaceSound);
+  buttonPlay.addEventListener('click', play);
+  buttonPause.addEventListener('click', pause);
+  buttonStop.addEventListener('click', stop);
+  buttonAdd.addEventListener('click', add);
+  buttonReduce.addEventListener('click', reduce);
+  buttonForest.addEventListener('click', forest);
+  buttonRain.addEventListener('click', rain);
+  buttonCoffeeShop.addEventListener('click', coffeeShop);
+  buttonFireplace.addEventListener('click', fireplace);
 
 }

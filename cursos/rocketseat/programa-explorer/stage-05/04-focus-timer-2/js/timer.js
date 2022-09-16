@@ -1,100 +1,86 @@
 export default function Timer({
-  displayMinutes,
-  displaySeconds,
-  hideButtonPause,
-  cantReduce,
-  canReduce,
-  pauseSounds,
-  finishTimer
+  secondsDisplay,
+  minutesDisplay,
+  hidePauseAndShowPlay,
+  disableAndEnableButtonReduce,
+  playFinishTimerSound,
+  pauseAllSounds
 }) {
 
-  let minutes = Number(displayMinutes.textContent);
   let timerInterval;
+  let minutes = Number(minutesDisplay.textContent);
+  let seconds = Number(secondsDisplay.textContent);
 
   function updateSecondsDisplay(seconds) {
 
-    displaySeconds.innerText = String(seconds).padStart(2, '0');
+    secondsDisplay.innerText = String(seconds).padStart(2, '0');
 
   }
 
   function updateMinutesDisplay(minutes) {
 
-    displayMinutes.innerText = String(minutes).padStart(2, '0');
+    minutesDisplay.innerText = String(minutes).padStart(2, '0');
 
   }
 
-  function reset() {
-    updateMinutesDisplay(minutes);
-    updateSecondsDisplay('00');
-  }
-
-  setInterval(() => {
-    let minutes = displayMinutes.textContent;
-    if (minutes < 5) cantReduce();
-    else canReduce();
-  }, 1)
-
-  function countdown() {
-
-    let seconds = Number(displaySeconds.textContent);
-    let newSeconds = seconds;
-
-    timerInterval = setInterval(() => {
-      let minutes = Number(displayMinutes.textContent);
-      let isFinished = minutes <= 0 && newSeconds <= 0;
-
-
-
-      if (isFinished) {
-        updateSecondsDisplay('00');
-        pause();
-        hideButtonPause();
-        pauseSounds();
-        finishTimer();
-        return
-      }
-
-
-      if (newSeconds <= 0) {
-        newSeconds = 60;
-        --minutes;
-      }
-
-      --newSeconds;
-
-      updateMinutesDisplay(minutes);
-      updateSecondsDisplay(newSeconds);
-
-    }, 1000);
-
-  }
-
-  function pause() {
+  function pauseCountdown() {
 
     clearInterval(timerInterval);
 
   }
 
-  function stop() {
+  function resetCountdown() {
 
+    pauseCountdown();
+    minutes = '00';
+    seconds = '00';
     updateMinutesDisplay(minutes);
-    updateSecondsDisplay('00');
-
+    updateSecondsDisplay(seconds);
 
   }
 
+  function isFinished(minutes, seconds) {
 
+    if (minutes <= 0 && seconds <= 0) {
 
+      playFinishTimerSound();
+      pauseCountdown();
+      hidePauseAndShowPlay();
+      pauseAllSounds();
 
+    }
+
+  }
+
+  function countdown() {
+
+    timerInterval = setInterval(() => {
+
+      minutes = Number(minutesDisplay.textContent);
+      seconds = Number(secondsDisplay.textContent);
+
+      if (seconds <= 0) {
+
+        --minutes
+        seconds = 60;
+
+      }
+
+      --seconds;
+      disableAndEnableButtonReduce(minutes);
+      updateSecondsDisplay(seconds);
+      updateMinutesDisplay(minutes);
+      isFinished(minutes, seconds);
+
+    }, 1000);
+
+  }
 
   return {
-    updateMinutesDisplay,
-    updateSecondsDisplay,
     countdown,
-    pause,
-    stop,
-    reset,
+    pauseCountdown,
+    resetCountdown,
+    isFinished
   }
 
 }
-

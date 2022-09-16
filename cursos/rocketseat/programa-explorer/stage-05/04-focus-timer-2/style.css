@@ -35,15 +35,6 @@ button svg path {
   transition: .2s;
 }
 
-
-button:hover>svg path:nth-child(1) {
-  fill: var(--primary-color);
-}
-
-button:hover>svg path:nth-child(2) {
-  fill: var(--selected-card-icon-color);
-}
-
 .hide {
   display: none;
 }
@@ -54,11 +45,14 @@ button:hover>svg path:nth-child(2) {
 
 main {
   width: fit-content;
-  padding: 3rem 2rem 0;
+  min-height: 100vh;
+  padding: 0rem 2rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  display: grid;
+  place-items: center;
 }
 
 .timer-wrapper {
@@ -85,8 +79,6 @@ main {
 }
 
 .controls button svg {
-  /* min-width: 4.8rem;
-  min-height: 4.8rem; */
   transition: .2s;
   border-radius: 50%;
 }
@@ -106,7 +98,6 @@ main {
   fill: var(--bg-color);
 }
 
-
 .sounds-wrapper {
   width: 28rem;
   display: grid;
@@ -124,11 +115,6 @@ main {
 
 .sounds-wrapper button input:checked+svg path:nth-child(2) {
   fill: var(--selected-card-icon-color);
-}
-
-
-.sounds-wrapper button:hover input:checked+svg path:nth-child(1) {
-  fill: var(--primary-color-light);
 }
 
 .sounds-wrapper button {
@@ -168,9 +154,18 @@ main {
     align-items: center;
   }
 
+  .sounds-wrapper button:hover>svg path:nth-child(1) {
+    fill: var(--primary-color);
+  }
+
+  button:hover>svg path:nth-child(2) {
+    fill: var(--selected-card-icon-color);
+  }
+
   main {
     padding: 5rem;
     gap: 19rem;
+    display: flex;
     flex-direction: row;
     align-items: center;
 

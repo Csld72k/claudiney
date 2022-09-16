@@ -1,49 +1,45 @@
-import { Elements } from './elements.js';
+import { Elements } from "./elements.js";
 import Controls from './controls.js';
-import Events from './events.js';
-import Sounds from './sounds.js';
 import Timer from './timer.js';
+import Events from "./events.js";
+import Sound from "./sound.js";
 
 const {
-  displayMinutes,
-  displaySeconds,
+  secondsDisplay,
+  minutesDisplay,
+  checkboxForest,
+  checkboxRain,
+  checkboxCoffeeShop,
+  checkboxFireplace,
   buttonPlay,
   buttonPause,
-  buttonStop,
-  buttonAdd,
-  buttonReduce,
-  buttonForestSound,
-  buttonRainSound,
-  buttonCoffeShopSound,
-  buttonFireplaceSound
+  buttonReduce
 } = Elements;
-
-const sound = Sounds();
 
 const controls = Controls({
   buttonPlay,
   buttonPause,
-  buttonStop,
-  buttonAdd,
-  buttonReduce,
-  buttonForestSound,
-  buttonRainSound,
-  buttonCoffeShopSound,
-  buttonFireplaceSound,
-  playForestSound: sound.playForestSound,
-  playRainSound: sound.playRainSound,
-  playCoffeeShopSound: sound.playCoffeeShopSound,
-  playFireplaceSound: sound.playFireplaceSound
+  buttonReduce
+});
+
+const sound = Sound({
+  checkboxForest,
+  checkboxRain,
+  checkboxCoffeeShop,
+  checkboxFireplace,
+  buttonPlay
 });
 
 const timer = Timer({
-  displayMinutes,
-  displaySeconds,
-  hideButtonPause: controls.hideButtonPause,
-  cantReduce: controls.cantReduce,
-  canReduce: controls.canReduce,
-  pauseSounds: controls.pauseSounds,
-  finishTimer: sound.finishTimer
+  secondsDisplay,
+  minutesDisplay,
+  hidePauseAndShowPlay: controls.hidePauseAndShowPlay,
+  disableAndEnableButtonReduce: controls.disableAndEnableButtonReduce,
+  playFinishTimerSound: sound.finishSound,
+  pauseAllSounds: sound.pauseAllSounds
 });
 
-Events(controls, timer, sound);
+// START WITH buttonReduce DISABLED BEEN ENABLED WHEN MINUTES >= 5
+controls.disableAndEnableButtonReduce('00');
+
+Events({ controls, timer, sound });
