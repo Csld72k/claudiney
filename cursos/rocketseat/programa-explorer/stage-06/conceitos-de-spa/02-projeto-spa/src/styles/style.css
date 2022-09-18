@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: gray;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+nav {
+  margin: 4rem 7.2rem 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 4.2rem;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a:hover {
+  text-shadow: 0 10px 3px rgb(255, 255, 255);
+}
+
+nav li a {
+  font-size: 2.2rem;
+
+  color: #fff;
+  transition: .2s;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#app img {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -1;
+}
+
+#app h1, #app h2 {
+  font-weight: bold;
+}
+
+.home-page {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.home-page h1 {
+  font-size: 4.8rem;
+}
+
+.home-page button {
+  padding: 1.2rem 3.2rem;
+
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  border: 2px solid #fff;
+  border-radius: .5rem;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.home-page button:hover {
+  background-color: #fff;
+  color: #02799D;
+}
+
+.universe-page, .exploration-page {
+  max-width: 64.8rem;
+  margin: 18.5rem 0 0 10rem;
+}
+
+.universe-page h2, .exploration-page h2 {
+  font-size: 4.8rem;
+}
+
+.universe-page p, .exploration-page p {
+  font-weight: normal;
+  font-size: 1.8rem;
+}
+
+.error {
+  width: 100%;
+  height: 80vh;
+  display: grid;
+  place-content: center;
+  font-size: 10rem;
+  color: #02799D;
+}
