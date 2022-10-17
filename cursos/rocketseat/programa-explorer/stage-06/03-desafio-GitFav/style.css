@@ -54,8 +54,6 @@ header {
   align-items: center;
   gap: 29.3rem;
   margin: 8rem 0 7rem;
-  /* margin-top: 11.5rem; */
-  /* margin-bottom: 8.7rem; */
 }
 
 header span img {
@@ -166,7 +164,6 @@ main thead .action {
 }
 
 /* COLS WITH USERS  ↓ / COLS WITH USERS  ↓ / COLS WITH USERS  ↓ */
-/* COLS WITH USERS  ↓ / COLS WITH USERS  ↓ / COLS WITH USERS  ↓ */
 
 main tbody {
   font-size: 2rem;
@@ -187,6 +184,10 @@ main table tbody tr td {
 
 main table tbody tr {
   transition: .1s;
+}
+
+main table tbody tr a {
+  color: var(--color-text);
 }
 
 main table tbody tr:hover {
@@ -285,7 +286,7 @@ main tbody .empty-col div img {
   width: 13.2rem;
 }
 
-main table tbody tr, main table tbody tr:hover {
+main table tbody.has-no-users tr, main table tbody.has-no-users tr:hover {
   background-color: var(--color-empty-col-bg);
 }
 
