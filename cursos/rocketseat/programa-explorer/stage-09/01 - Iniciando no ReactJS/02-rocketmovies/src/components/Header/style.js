@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Container = styled.header`
   width: 100%;
   height: 11.6rem;
-  padding: 2.6rem 12.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12.8rem;
 
   background-color: ${({ theme }) => theme.colors.background};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.tag_background_dark};
 
   > a {
     font-size: 2.4rem;

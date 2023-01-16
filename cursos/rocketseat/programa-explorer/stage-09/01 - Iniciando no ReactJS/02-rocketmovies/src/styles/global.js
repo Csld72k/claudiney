@@ -27,6 +27,28 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  /* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: ${({ theme }) => theme.background};
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${({ theme }) => theme.colors.primary_color};
+  border-radius: 1rem;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #F66;
+}
+
   body, input, button, textarea {
     font-family: 'Roboto Slab', serif;
     outline: none;
