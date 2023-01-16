@@ -2,7 +2,7 @@ import { Container } from "./style";
 
 export function Input({ icon: Icon, ...rest }) {
   return (
-    <Container>
+    <Container className="input">
       {Icon && <Icon size={20} />}
       <input {...rest} />
     </Container>
