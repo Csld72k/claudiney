@@ -7,6 +7,7 @@ export const Container = styled.button`
   font-size: 1.6rem;
   font-weight: 500;
   
-  background-color: ${({ theme }) => theme.colors.primary_color};
+  background-color: ${({ theme, buttonDark }) => buttonDark ? theme.colors.tag_background_2 : theme.colors.primary_color};
+  color: ${({ theme, buttonDark }) => buttonDark ? theme.colors.primary_color : theme.colors.tag_background_dark};
   border-radius: 1rem;
 `;

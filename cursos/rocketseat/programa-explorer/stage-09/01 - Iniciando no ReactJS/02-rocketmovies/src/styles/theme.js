@@ -14,6 +14,7 @@ export default {
     tag_text: '#E5E5E5',
     tag_background_dark: '#312E38',
     tag_background: '#282124',
+    tag_background_2: '#0D0C0F',
 
     stack_background: '#ff859b0d',
   }

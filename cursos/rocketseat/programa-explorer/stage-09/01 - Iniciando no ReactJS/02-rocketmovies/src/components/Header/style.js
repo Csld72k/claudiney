@@ -25,6 +25,7 @@ export const Container = styled.header`
 
   > a.profileWrapper {
     display: flex;
+    align-items: center;
     gap: .9rem;
 
     span {

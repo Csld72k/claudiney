@@ -36,11 +36,6 @@ export const Container = styled.div`
       flex-direction: column;
       gap: .8rem;
 
-      /* &:nth-child(4) {
-        display: none;
-        margin-top: 1.6rem;
-      } */
-
       div.input {
         width: 34rem;
         height: 5.6rem;
