@@ -25,15 +25,7 @@ export const Container = styled.div`
     display: flex;
     gap: .6rem ;
     
-    color: ${({ theme }) => theme.colors.primary_color};
-
-    svg.unfilled {
-      fill: transparent;
-    }
-
-    svg.filled {
-      fill: ${({ theme }) => theme.colors.primary_color};
-    }
+    /* color: ${({ theme }) => theme.colors.primary_color}; */
   }
 
   > p {

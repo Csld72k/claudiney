@@ -62,6 +62,18 @@ export default createGlobalStyle`
   button:hover, a:hover {
     filter: brightness(.8);
   }
+
+  svg.unfilled, svg.filled {
+    color: ${({ theme }) => theme.colors.primary_color};
+  }
+  
+  svg.unfilled {
+      fill: transparent;
+  }
+
+  svg.filled {
+      fill: ${({ theme }) => theme.colors.primary_color};
+  }
   
   
 `;

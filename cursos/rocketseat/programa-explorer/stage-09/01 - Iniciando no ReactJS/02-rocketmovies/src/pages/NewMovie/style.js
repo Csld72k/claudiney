@@ -20,7 +20,7 @@ export const Container = styled.div`
   
     .container {
       width: 122rem;
-      margin: 0 auto;
+      margin: 0 auto 4rem;
       
     
       a[type=button] {
