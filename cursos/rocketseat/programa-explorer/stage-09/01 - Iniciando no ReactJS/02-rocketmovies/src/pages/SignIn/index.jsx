@@ -15,7 +15,7 @@ export function SignIn() {
           <Input placeholder="E-mail" type="text" icon={FiMail} />
           <Input placeholder="Senha" type="password" icon={FiLock} />
           <Button title="Entrar" />
-          <ButtonText title="Criar conta" />
+          <ButtonText title="Criar conta" target="/signup" />
         </fieldset>
       </Form>
 

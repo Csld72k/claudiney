@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Container } from "./style";
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
@@ -11,46 +12,48 @@ export function Home() {
 
       <div className="header">
         <h1>Meus filmes</h1>
-        <Button icon={FiPlus} title="Adicionar filme" />
+        <Link to="/new-movie">
+          <Button icon={FiPlus} title="Adicionar filme" />
+        </Link>
       </div>
 
       <div className="stack-container">
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."
           tagTitle={["Ficção científica", "Drama", "Família"]}
         />
 
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."
           tagTitle={["Ficção científica", "Drama", "Família"]}
         />
 
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."
           tagTitle={["Ficção científica", "Drama", "Família"]}
         />
 
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."
           tagTitle={["Ficção científica", "Drama", "Família"]}
         />
 
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."
           tagTitle={["Ficção científica", "Drama", "Família"]}
         />
 
-        <Stack
+        <Stack target="/movie-details/:id"
           title="Interstellar"
           rating={FiStar}
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dictum eleifend nibh imperdiet sollicitudin. Proin finibus sed lectus tempor sodales. Vestibulum vitae dapibus massa. Nunc nisi ex, sodales at vehicula blandit, semper placerat tellus. Morbi accumsan nibh sit amet tincidunt ullamcorp..."

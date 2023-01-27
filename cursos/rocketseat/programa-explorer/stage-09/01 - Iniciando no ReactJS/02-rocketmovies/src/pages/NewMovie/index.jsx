@@ -13,7 +13,7 @@ export function NewMovie() {
 
       <div className="content">
         <div className="container">
-          <ButtonText title="Voltar" icon={FiArrowLeft} />
+          <ButtonText title="Voltar" icon={FiArrowLeft} target="/" />
           <form>
             <h2>Novo Filme</h2>
             <div className="inputContainer">

@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Container = styled.a`
+export const Container = styled(Link)`
   font-size: 1.6rem;
   font-weight: 400;
 

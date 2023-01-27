@@ -10,7 +10,7 @@ export function MovieDetails() {
       <Header />
       <div className="container">
         <div className="info">
-          <ButtonText title="Voltar" icon={FiArrowLeft} />
+          <ButtonText title="Voltar" icon={FiArrowLeft} target="/" />
 
           <div className="title">
             <h1>Interstellar</h1>

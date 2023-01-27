@@ -1,10 +1,9 @@
 import { Container } from "./style";
-// import { FiStar } from "react-icons/fi";
 import { Tag } from "../Tag";
 
-export function Stack({ title, rating: Icon, description: description, tagTitle }) {
+export function Stack({ title, rating: Icon, description: description, tagTitle, target }) {
   return (
-    <Container>
+    <Container to={target}>
       <h2>{title}</h2>
       <span>
         {<Icon className="star1 filled" size={20} />}

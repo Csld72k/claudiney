@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled(Link)`
   width: 123rem;
   margin: 0 auto;
   padding: 2.5rem 3.2rem;
@@ -25,7 +26,6 @@ export const Container = styled.div`
     display: flex;
     gap: .6rem ;
     
-    /* color: ${({ theme }) => theme.colors.primary_color}; */
   }
 
   > p {
