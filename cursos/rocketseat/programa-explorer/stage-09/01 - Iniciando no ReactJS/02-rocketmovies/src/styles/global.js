@@ -23,6 +23,8 @@ export default createGlobalStyle`
   body {
     font-size: 1.6rem;
 
+    background-color: ${({ theme }) => theme.colors.background};
+
     user-select: none ;
     -webkit-font-smoothing: antialiased;
   }
