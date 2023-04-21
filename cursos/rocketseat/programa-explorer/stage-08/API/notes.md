@@ -1,10 +1,9 @@
 # API - step by step
   1. [ ] Start the project with NodeJS;
   2. [ ] Adding the Express;
-  3. [ ] Pergunta;
+  3. [ ] Import the Express, run the Express, set a port to listen and execute on the port 3333;
   4. [ ] Pergunta;
   5. [ ] Pergunta;
-
 
 
 # Observations
@@ -13,15 +12,24 @@
     Node.js lets developers use JavaScript to write command line tools and for server-side scripting. The ability to run JavaScript code on the server is often used to generate dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, as opposed to using different languages for the server- versus client-side programming.
     Node.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).
     The Node.js distributed development project was previously governed by the Node.js Foundation, and has now merged with the JS Foundation to form the OpenJS Foundation. OpenJS Foundation is facilitated by the Linux Foundation's Collaborative Projects program.
-
+  
   2. Express is a framework used to handle HTTP requests and responses.
     * Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the "de facto standard" server framework for NodeJS.
-
+  
+  3. 
 
 
 # Notes
   1. **--> npm init -y <--**;
   2. **--> npm install express --save <--**;
-  3. Pergunta;
+  3. ```JavaScript
+      const express = require("express"); //Importou o Express
+
+      const app = express(); //Inicializou o Express
+
+      const PORT = 3333; //Define uma porta para a API ficar observando/listening
+
+      app.listen(PORT, () => console.log(`Server is running on port ${PORT}`)); //Fica escutando a porta e ao iniciar a aplicação executa a função
+      ```;
   4. Pergunta;
   5. Pergunta;
