@@ -1,7 +1,12 @@
 # API - step by step
   1. [ ] Start the project with NodeJS;
   2. [ ] Adding the Express;
-  3. [ ] Import the Express, run the Express, set a port to listen and execute on the port 3333;
+  3. [ ] {
+          Import the Express;
+          Run the Express;
+          Set a port to listen;
+          Execute on the port 3333;
+        };
   4. [ ] Pergunta;
   5. [ ] Pergunta;
 
