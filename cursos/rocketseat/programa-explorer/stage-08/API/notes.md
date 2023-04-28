@@ -3,13 +3,16 @@
   2. [ ] Adding the Express;
   3. [ ];
   4. [ ] {
-          Import the Express;
-          Run the Express;
-          Set a port to listen;
-          Execute on the port 3333;
+          Import the Express,
+          Run the Express,
+          Set a port to listen,
+          Execute on the port 3333
         };
   5. [ ] Adding an automated Express execution on package.json script;
-  6. [ ] Pergunta;
+  6. [ ];
+  7. [ ] Adding a GET method;
+  8. [ ] Change the GET method to use Route Params (id and user);
+  9. [ ];
 
 
 # Observations
@@ -29,26 +32,63 @@
 
   4. =/=
 
-  5. We can use a script to run more easily the server application using the command line `npm ${scriptName}` for example "npm start", "npm test", etc.
+  5. We can use a script to run more easily the server application using the command line **`npm ${scriptName}`** for example **npm start**, **npm test**, etc.
 
   6. What's a route? A route links a point "A" to the point "B", is a path.
 
-      ||point A||  ==> route=path ==> ||point B||.
-      ||my website|| ==> route=path ==> ||server||.
+        ||point A||  ==> route=path ==> ||point B||.
+        ||my website|| ==> route=path ==> ||server||.
 
-    There are pattern for the API to know how it has to behave and what to do, they are called "request methods", usually called "HTTP verbs" and are they:
+      There are pattern for the API to know how it has to behave and what to do, they are called "request methods", usually called "HTTP verbs" and are they:
 
-      | GET    | => | reading | ==> Used to retrieve data from server. For example, when you type a URL into your browser and hit enter, your browser sends a GET request to the server to retrieve the webpage.
+        | GET    | => | reading | ==> Used to retrieve data from server. For example, when you type a URL into your browser and hit enter, your browser sends a GET request to the server to retrieve the webpage.
 
-      | POST   | => | creation  | ==> Used to submit data to a server. For example, when you submit a form on a webpage, the data is sent to the server using a POST request.
+        | POST   | => | creation  | ==> Used to submit data to a server. For example, when you submit a form on a webpage, the data is sent to the server using a POST request.
 
-      | PUT    | => | update  | ==> Used to update data on a server. For example, when you update your profile information, on a website, the data is sent to the server using a PUT request.
+        | PUT    | => | update  | ==> Used to update data on a server. For example, when you update your profile information, on a website, the data is sent to the server using a PUT request.
 
-      | DELETE | => | deletion  | ==> Used to delete a data from a server. For example, when you delete a post or a comment on a website, the request is sent to the server using a DELETE request.
+        | DELETE | => | deletion  | ==> Used to delete a data from a server. For example, when you delete a post or a comment on a website, the request is sent to the server using a DELETE request.
 
-      | PATCH  | => | partial update  | ==> Used to partially update data on a server. For example,when you edit a specific field on a record, the data is sent to the server using a PATCH request.
+        | PATCH  | => | partial update  | ==> Used to partially update data on a server. For example,when you edit a specific field on a record, the data is sent to the server using a PATCH request.
   
-  7. 
+  7. The GET Method:
+     GET is used to request data from a specified resource.
+
+     Note that the query string (name/value pairs) is sent in the URL of a GET request:
+
+     /test/demo_form.php?name1=value1&name2=value2
+
+     Some notes on GET requests:
+     GET requests can be cached
+     GET requests remain in the browser history
+     GET requests can be bookmarked
+     GET requests should never be used when dealing with sensitive data
+     GET requests have length restrictions
+     GET requests are only used to request data (not modify)
+
+  8. Route Params.
+     Receives the request data on the route.
+     Use case: Best way to fetch something specific, delete or update using unique identifier, for example:
+
+     GET: https://api.github.com/users/tgmarinho
+     PUT: https://api.github.com/users/tgmarinho
+     DELETE: https://api.github.com/users/380327
+
+     In this example above, it's updating and deleting the GitHub user with login:tgmarinho or id:380327.
+
+     ```JavaScript
+      //Route Params = /users/1
+
+      // Make the request in the browser: http://localhost:3333/users/1
+      server.get("/users/:id", (request, response) => {
+      const { id } = req.params; // desestruturado com ES06	
+      return res.json({ message: `Fetching the User ID: ${id}`});
+      });
+      ```.
+
+  9. 
+
+
 
 
 # Notes
@@ -56,7 +96,7 @@
 
   2. **--> npm install express --save <--**;
 
-  3. ;
+  3. =/=;
 
   4. ```JavaScript
       const express = require("express"); //Imported the Express framework
@@ -74,4 +114,19 @@
       }
       ```;
 
-  6. Pergunta;
+  6. =/=;
+
+  7. ```JavaScript
+      app.get("/message", (request, response) => {
+      response.send("Hello World!")
+      }); //Adding a GET method for testing
+      ```;
+
+  8. ```JavaScript
+      app.get("/message/:id/:user", (request, response) => {
+        const { id, user } = request.params;
+        response.send(`ID da mensagem: ${id} para o usuário ${user}`)
+      }); //Adding a GET method for testing
+      ```;
+
+  9. ;
