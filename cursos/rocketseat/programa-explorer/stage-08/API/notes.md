@@ -7,7 +7,7 @@
           Set a port to listen;
           Execute on the port 3333;
         };
-  4. [ ] Pergunta;
+  4. [ ] Adding an automated Express execution on package.json script;
   5. [ ] Pergunta;
 
 
@@ -21,20 +21,30 @@
   2. Express is a framework used to handle HTTP requests and responses.
     * Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the "de facto standard" server framework for NodeJS.
   
-  3. 
+  3. We can use a script to run more easily the server application using the command line `npm ${scriptName}` for example "npm start", "npm test", etc.
+
+  4. 
 
 
 # Notes
   1. **--> npm init -y <--**;
+
   2. **--> npm install express --save <--**;
+
   3. ```JavaScript
-      const express = require("express"); //Importou o Express
+      const express = require("express"); //Imported the Express framework
 
-      const app = express(); //Inicializou o Express
+      const app = express(); //Started the Express
 
-      const PORT = 3333; //Define uma porta para a API ficar observando/listening
+      const PORT = 3333; //Set a port for the API be watching/listening
 
-      app.listen(PORT, () => console.log(`Server is running on port ${PORT}`)); //Fica escutando a porta e ao iniciar a aplicação executa a função
+      app.listen(PORT, () => console.log(`Server is running on port ${PORT}`)); //It's listening the port and when starting the application it executes the function
       ```;
-  4. Pergunta;
+      
+  4. ```JavaScript
+      "scripts": {
+        "start": "node ./src/server.js"
+      }
+      ```;
+
   5. Pergunta;
