@@ -1,7 +1,7 @@
 # API - step by step
   01. [ ] Start the project with NodeJS;
   02. [ ] Adding the Express;
-  03. [ ];
+  03. [ ] =/=;
   04. [ ] {
           Import the Express,
           Run the Express,
@@ -9,7 +9,7 @@
           Execute on the port 3333
         };
   05. [ ] Adding an automated Express execution on package.json script;
-  06. [ ];
+  06. [ ] =/=;
   07. [ ] Adding a GET method;
   08. [ ] Change the GET method to use Route Params (id and user);
   09. [ ] Adding another GET method to use Query Params (page and limit);
@@ -104,11 +104,11 @@
 
         http://myapi.com/banks?name=nubank
 
-          In the example above, I access the resource (or route) banks, filtering by name. To insert parameters I put "?" after the route and add the property and value: name=nubank.
+        In the example above, I access the resource (or route) banks, filtering by name. To insert parameters I put "?" after the route and add the property and value: name=nubank.
 
         http://myapi.com/movies?name=transformers&actors=megan,peter
 
-          In the example above I access the movies API by searching for name and actors. Whenever passing more than one parameter we can put "&" to separate the parameters.
+        In the example above I access the movies API by searching for name and actors. Whenever passing more than one parameter we can put "&" to separate the parameters.
 
       Unlike Route Parameters, in Query Parameters I can fetch the route even if some or all of the parameters are missing.
 
@@ -127,16 +127,14 @@
         If I request only "http://localhost:3333/users?name=Claudiney" missing the Id and Ranking, it will return: "User: Claudiney Id:undefined Ranking: undefined".
         And so on.....
 
-                |URL|               |Query String Begin|   |Property Value|  |Parameter Name|
+        (       |URL|               |Query String Begin|   |Property Value|  |Parameter Name|
                   ↓                         ↓                      ↓                ↓
       https://serveraddress.com.br  /users  ?        page     =    2       &      limit     =     10
                                         ↑              ↑                    ↑                       ↑
-                                    |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|
+                                    |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|)
 
       ![Query Params](https://user-images.githubusercontent.com/84917784/235512136-b564fcd3-9df4-4afc-856b-808c2672d62c.png)
       ![Query Params - Rocketseat](https://user-images.githubusercontent.com/84917784/235512228-9045960c-e552-4733-838e-7e12f50a1361.png)
-      ![Query Params]("./Query Params.png")
-      ![Query Params - Rocketseat]("./Query Params - Rocketseat.png")
 
 
   10. 
