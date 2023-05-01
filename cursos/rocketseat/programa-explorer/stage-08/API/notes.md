@@ -71,9 +71,9 @@
       Receives the request data on the route.
       Use case: Best way to fetch something specific, delete or update using unique identifier, for example:
 
-      GET: https://api.github.com/users/tgmarinho;
-      PUT: https://api.github.com/users/tgmarinho;
-      DELETE: https://api.github.com/users/380327;
+      GET: https://api.github.com/users/tgmarinho<br/>
+      PUT: https://api.github.com/users/tgmarinho<br/>
+      DELETE: https://api.github.com/users/380327<br/>
 
       In this example above, it's updating and deleting the GitHub user with login:tgmarinho or id:380327.
 
@@ -134,6 +134,7 @@
         `                            |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|`
 
       ![Query Params](https://user-images.githubusercontent.com/84917784/235512136-b564fcd3-9df4-4afc-856b-808c2672d62c.png)
+      
       ![Query Params - Rocketseat](https://user-images.githubusercontent.com/84917784/235512228-9045960c-e552-4733-838e-7e12f50a1361.png)
 
 
