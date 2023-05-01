@@ -127,11 +127,11 @@
         If I request only "http://localhost:3333/users?name=Claudiney" missing the Id and Ranking, it will return: "User: Claudiney Id:undefined Ranking: undefined".
         And so on.....
 
-        (`        |URL|               |Query String Begin|   |Property Value|  |Parameter Name|
-                    ↓                         ↓                      ↓                ↓
-        https://serveraddress.com.br  /users  ?        page     =    2       &      limit     =     10
-                                         ↑              ↑                    ↑                       ↑
-                                     |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|`)
+        (`          |URL|             |Query String Begin|    |Property Value|  |Parameter Name|`)
+        (`            ↓                         ↓                      ↓                ↓`)
+        (`https://serveraddress.com.br  /users  ?        page     =    2       &      limit     =     10`)
+        (`                                 ↑              ↑                    ↑                       ↑`)
+        (`                            |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|`)
 
       ![Query Params](https://user-images.githubusercontent.com/84917784/235512136-b564fcd3-9df4-4afc-856b-808c2672d62c.png)
       ![Query Params - Rocketseat](https://user-images.githubusercontent.com/84917784/235512228-9045960c-e552-4733-838e-7e12f50a1361.png)
