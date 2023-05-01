@@ -71,9 +71,9 @@
       Receives the request data on the route.
       Use case: Best way to fetch something specific, delete or update using unique identifier, for example:
 
-      GET: https://api.github.com/users/tgmarinho
-      PUT: https://api.github.com/users/tgmarinho
-      DELETE: https://api.github.com/users/380327
+      GET: https://api.github.com/users/tgmarinho;
+      PUT: https://api.github.com/users/tgmarinho;
+      DELETE: https://api.github.com/users/380327;
 
       In this example above, it's updating and deleting the GitHub user with login:tgmarinho or id:380327.
 
