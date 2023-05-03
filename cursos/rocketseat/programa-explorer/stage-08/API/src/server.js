@@ -2,15 +2,9 @@ const express = require("express"); //Importou o Express
 
 const app = express(); //Inicializou o Express
 
-app.get("/message/:id/:user", (request, response) => {
-  const { id, user } = request.params;
-  response.send(`ID da mensagem: ${id} para o usuário ${user}`)
-}); //Inserindo um método GET para teste - utilizando o Route Params
-
-app.get("/users", (request, response) => {
-  const { page, limit } = request.query;
-  response.send(`Página: ${page}. Mostrar: ${limit}`)
-}); //Inserindo um método GET para teste - utilizando o Query Params
+app.post("/users", (request, response) => {
+  response.send(`Você chamou o POST`)
+}); //Inserindo um método POST para teste - utilizando Insomnia
 
 const PORT = 3333; //Define uma porta para a API ficar observando/listening
 

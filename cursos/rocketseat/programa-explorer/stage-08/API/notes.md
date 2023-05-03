@@ -1,29 +1,39 @@
-# API - step by step
+# 👣 Step by step - API (stage-08/Rocketseat)
   01. [ ] Start the project with NodeJS;
-  02. [ ] Adding the Express;
-  03. [ ] =/=;
+  02. [ ] Add the Express;
+  03. [ ] Learning about node_modules;
   04. [ ] {
           Import the Express,
           Run the Express,
           Set a port to listen,
           Execute on the port 3333
         };
-  05. [ ] Adding an automated Express execution on package.json script;
-  06. [ ] =/=;
-  07. [ ] Adding a GET method;
+  05. [ ] Add an automated Express execution on package.json script;
+  06. [ ] Learning about routes and HTTP methods;
+  07. [ ] Add a GET method;
   08. [ ] Change the GET method to use Route Params (id and user);
-  09. [ ] Adding another GET method to use Query Params (page and limit);
-  10. [ ];
+  09. [ ] Add another GET method to use Query Params (page and limit);
+  10. [ ] Install Nodemon;
+  11. [ ] Learning about the program Insomnia;
+  12. [ ] Delete GET method lines and add a POST method;
+  13. [ ];
+  14. [ ];
+  15. [ ];
+  16. [ ];
+  17. [ ];
+  18. [ ];
+  19. [ ];
+  20. [ ];
 
 
-# Observations
+# 🕵️ Observations
   01. NodeJS is an environment that provides us resources that allow write and run JavaScript applications. It serves to make whatever you want, from websites to automation scripts including API creation.
     * Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript Engine, and executes JavaScript code outside a web browser.
     Node.js lets developers use JavaScript to write command line tools and for server-side scripting. The ability to run JavaScript code on the server is often used to generate dynamic web page content before the page is sent to the user's web browser. Consequently, Node.js represents a "JavaScript everywhere" paradigm, unifying web-application development around a single programming language, as opposed to using different languages for the server- versus client-side programming.
     Node.js has an event-driven architecture capable of asynchronous I/O. These design choices aim to optimize throughput and scalability in web applications with many input/output operations, as well as for real-time Web applications (e.g., real-time communication programs and browser games).
     The Node.js distributed development project was previously governed by the Node.js Foundation, and has now merged with the JS Foundation to form the OpenJS Foundation. OpenJS Foundation is facilitated by the Linux Foundation's Collaborative Projects program.
   
-  02. Express is a framework used to handle HTTP requests and responses.
+  02. Express is a framework used to handle HTTP requests and responses.<br/>
     * Express.js, or simply Express, is a back end web application framework for building RESTful APIs with Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the "de facto standard" server framework for NodeJS.
   
   03. Packages are dropped into the node_modules folder under the prefix. When installing locally, this means that you can require("packagename") to load its main module, or require("packagename/lib/path/to/sub/module") to load other modules.
@@ -134,20 +144,55 @@
         `                            |Resource|  |Parameter Name|  |Query String Separator|  |Property Value|`
 
       ![Query Params](https://user-images.githubusercontent.com/84917784/235512136-b564fcd3-9df4-4afc-856b-808c2672d62c.png)
-      
+
       ![Query Params - Rocketseat](https://user-images.githubusercontent.com/84917784/235512228-9045960c-e552-4733-838e-7e12f50a1361.png)
 
 
-  10. 
+  10. Nodemon is a tool that helps develop Node.js based applications by automatically restarting the node application when file changes in the directory are detected. 
+      Nodemon does not require any additional changes to your code or method of development. nodemon is a replacement wrapper for node. To use nodemon, replace the word node on the command line when executing your script.
+
+  11. By default, the browser only accepts GET requests, to use the others HTTP methods we need a specific program to this and we'll use the Insomnia.
+      Insomnia is an open source desktop application that takes the pain out of interacting with and designing, debugging, and testing APIs. Insomnia combines an easy-to-use interface with advanced functionality like authentication helpers, code generation, and environment variables.
+
+  12. The POST Method:
+      POST is used to send data to a server to create/update a resource.
+
+      The data sent to the server with POST is stored in the request body of the HTTP request:
+
+      POST /test/demo_form.php HTTP/1.1
+      Host: w3schools.com
+
+      name1=value1&name2=value2
+      Some notes on POST requests:
+
+      POST requests are never cached
+      POST requests do not remain in the browser history
+      POST requests cannot be bookmarked
+      POST requests have no restrictions on data length
+
+  13. 
+
+  14. 
+
+  15. 
+
+  16. 
+
+  17. 
+
+  18. 
+
+  19. 
+
+  20. 
 
 
-
-# Notes
+# 📝 Notes
   01. **--> npm init -y <--**;
 
   02. **--> npm install express --save <--**;
 
-  03. =/=;
+  03. Always remember to create the archive ".gitignore" to ignore the folder "node_modules";
 
   04. ```JavaScript
       const express = require("express"); //Imported the Express framework
@@ -187,4 +232,29 @@
       }); ////Adding a GET method for testing - using Query Params
       ```;
 
-  10. 
+  10. **--> npm install nodemon --save-dev <--** to install only in development dependencies.
+      **--> npm install -g nodemon <--** to install globally;
+
+  11. =/=;
+
+  12. ```JavaScript
+      app.post("/users", (request, response) => {
+      response.send(`Você chamou o POST`)
+      }); //Inserindo um método POST para teste - utilizando Insomnia
+      ```;
+
+  13. ;
+
+  14. ;
+
+  15. ;
+
+  16. ;
+
+  17. ;
+
+  18. ;
+
+  19. ;
+
+  20. ;
