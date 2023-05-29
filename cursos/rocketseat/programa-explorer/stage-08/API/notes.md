@@ -16,7 +16,7 @@
   10. [ ] Install Nodemon;
   11. [ ] Learning about the program Insomnia;
   12. [ ] Delete GET method lines and add a POST method;
-  13. [ ];
+  13. [ ] Make the API knows that we're using JSON in the 'body' and use JSON on the 'response';
   14. [ ];
   15. [ ];
   16. [ ];
@@ -170,7 +170,10 @@
       POST requests cannot be bookmarked
       POST requests have no restrictions on data length
 
-  13. 
+  13. Request.body:
+      When you need to send data from a client (let's say, a browser) to your API, you send it as a request body.
+      A request body is data sent by the client to your API. A response body is the data your API sends to the client.
+      Your API almost always has to send a response body. But clients don't necessarily need to send request bodies all the time.
 
   14. 
 
@@ -240,10 +243,22 @@
   12. ```JavaScript
       app.post("/users", (request, response) => {
       response.send(`Você chamou o POST`)
-      }); //Inserindo um método POST para teste - utilizando Insomnia
+      }); //Adding a POST method for testing - using Insomnia
       ```;
 
-  13. ;
+  13. ```JavaScript
+      app.use(express.json()); //So that the API knows which pattern we'll use in the 'request.body' which in this case will be JSON
+      ```
+
+      Change:
+      ```JavaScript
+      response.send(`Usuário: ${user}. E-mail: ${email}. E a senha: ${password}`)
+      ```
+      
+      To:
+      ```JavaScript
+      response.json({ name, email, password })
+      ```;
 
   14. ;
 
