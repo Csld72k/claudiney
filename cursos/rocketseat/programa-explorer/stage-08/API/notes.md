@@ -18,8 +18,8 @@
   12. [ ] Delete GET method lines and add a POST method;
   13. [ ] Make the API knows that we're using JSON in the 'body' and use JSON on the 'response';
   14. [ ] Organize the project structure;
-  15. [ ]Learning about controllers;
-  16. [ ];
+  15. [ ] Learning about controllers;
+  16. [ ] Separates the responsibilities of routes and controllers;
   17. [ ];
   18. [ ];
   19. [ ];
@@ -190,7 +190,7 @@
         * Change colors according to values,
         * Anything else you are able to program
 
-  16. 
+  16. =/=
 
   17. 
 
@@ -282,7 +282,7 @@
         const { name, email, password } = request.body;
 
         response.json({ name, email, password });
-      }); //Inserindo um método POST para teste - utilizando Insomnia
+      }); // Inserting a POST method for testing - using Insomnia
 
       module.exports = usersRoutes;
       ```
@@ -303,7 +303,27 @@
 
   15. Create controllers folder and UsersController.js inside.;
 
-  16. ;
+  16. In user.routes.js:
+      ```JavaScript
+      const UsersController = require("../controllers/UsersController"); // Importing the controller
+
+      const usersController = new UsersController(); // Instantiating the UsersController() class
+
+      usersRoutes.post("/", usersController.create); // Passing the responsibility of creating to the controller
+      ```
+
+      In UsersController.js:
+      ```JavaScript
+      class UsersController {
+        create(request, response) {
+          const { name, email, password } = request.body; // Request data from body
+
+          response.json({ name, email, password }); // Response the data
+        }
+      }
+
+      module.exports = UsersController; // Export the UsersController class
+      ```;
 
   17. ;
 

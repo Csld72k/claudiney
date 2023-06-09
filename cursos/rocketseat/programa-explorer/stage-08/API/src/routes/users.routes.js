@@ -1,11 +1,11 @@
 const { Router } = require("express");
 
+const UsersController = require("../controllers/UsersController"); // Importa o controller
+
 const usersRoutes = Router();
 
-usersRoutes.post("/", (request, response) => {
-  const { name, email, password } = request.body;
+const usersController = new UsersController();
 
-  response.json({ name, email, password });
-}); //Inserindo um método POST para teste - utilizando Insomnia
+usersRoutes.post("/", usersController.create);
 
 module.exports = usersRoutes;
