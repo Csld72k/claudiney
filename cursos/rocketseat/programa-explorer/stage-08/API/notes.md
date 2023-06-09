@@ -18,7 +18,7 @@
   12. [ ] Delete GET method lines and add a POST method;
   13. [ ] Make the API knows that we're using JSON in the 'body' and use JSON on the 'response';
   14. [ ] Organize the project structure;
-  15. [ ];
+  15. [ ]Learning about controllers;
   16. [ ];
   17. [ ];
   18. [ ];
@@ -179,7 +179,16 @@
 
       ![Estrutura Inicial do Projeto](https://github.com/Csld72k/claudiney/assets/84917784/20aae935-d0ea-47e7-a28f-926f9cb8dee2)
 
-  15. 
+  15. A controller is a function you write to control your data.
+      With a self-written controller, you can modify data anyway you want:
+
+        * Convert to upper case,
+        * Convert currencies,
+        * Calculate and Summarize,
+        * Round values,
+        * Substitute values,
+        * Change colors according to values,
+        * Anything else you are able to program
 
   16. 
 
@@ -262,39 +271,37 @@
       response.json({ name, email, password })
       ```;
 
-  14. {
-        Create routes folder, and then create users routes file to group the routes,
-        Move the routes from server.js to users.routes.js,
-        ```JavaScript
-        const { Router } = require("express");
+  14. Create routes folder, and then create users routes file to group the routes.
+      Move the routes from server.js to users.routes.js.
+      ```JavaScript
+      const { Router } = require("express");
 
-        const usersRoutes = Router();
+      const usersRoutes = Router();
 
-        usersRoutes.post("/", (request, response) => {
-          const { name, email, password } = request.body;
+      usersRoutes.post("/", (request, response) => {
+        const { name, email, password } = request.body;
 
-          response.json({ name, email, password });
-        }); //Inserindo um método POST para teste - utilizando Insomnia
+        response.json({ name, email, password });
+      }); //Inserindo um método POST para teste - utilizando Insomnia
 
-        module.exports = usersRoutes;
-        ```
+      module.exports = usersRoutes;
+      ```
 
-        Create the file index.js into routes folder,
+      Create the file index.js into routes folder.
 
-        ```JavaScript
-        const { Router } = require("express");
+      ```JavaScript
+      const { Router } = require("express");
 
-        const usersRouter = require("./users.routes");
+      const usersRouter = require("./users.routes");
 
-        const routes = Router();
+      const routes = Router();
 
-        routes.use("/users", usersRouter)
+      routes.use("/users", usersRouter)
 
-        module.exports = routes;
-        ```
-      };
+      module.exports = routes;
+      ```;
 
-  15. ;
+  15. Create controllers folder and UsersController.js inside.;
 
   16. ;
 
