@@ -1,13 +1,11 @@
-const express = require("express"); //Importou o Express
+const express = require("express"); //Importa o Express
 
-const app = express(); //Inicializou o Express
+const routes = require("./routes"); //Importa o arquivo ./routes/index.js
+
+const app = express(); //Inicializa o Express
 app.use(express.json()); //Para que a API saiba qual padrão iremos utilizar no 'request.body' que nesse caso será JSON
 
-app.post("/users", (request, response) => {
-  const { name, email, password } = request.body;
-
-  response.json({ name, email, password });
-}); //Inserindo um método POST para teste - utilizando Insomnia
+app.use(routes); // Para que a aplicação use as rotas definidas no arquivo ./routes/index.js
 
 const PORT = 3333; //Define uma porta para a API ficar observando/listening
 

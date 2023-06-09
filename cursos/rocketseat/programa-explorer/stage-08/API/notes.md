@@ -17,7 +17,7 @@
   11. [ ] Learning about the program Insomnia;
   12. [ ] Delete GET method lines and add a POST method;
   13. [ ] Make the API knows that we're using JSON in the 'body' and use JSON on the 'response';
-  14. [ ];
+  14. [ ] Organize the project structure;
   15. [ ];
   16. [ ];
   17. [ ];
@@ -175,7 +175,9 @@
       A request body is data sent by the client to your API. A response body is the data your API sends to the client.
       Your API almost always has to send a response body. But clients don't necessarily need to send request bodies all the time.
 
-  14. 
+  14. Initial Project Structure
+
+      ![Estrutura Inicial do Projeto](https://github.com/Csld72k/claudiney/assets/84917784/20aae935-d0ea-47e7-a28f-926f9cb8dee2)
 
   15. 
 
@@ -260,7 +262,37 @@
       response.json({ name, email, password })
       ```;
 
-  14. ;
+  14. {
+        Create routes folder, and then create users routes file to group the routes,
+        Move the routes from server.js to users.routes.js,
+        ```JavaScript
+        const { Router } = require("express");
+
+        const usersRoutes = Router();
+
+        usersRoutes.post("/", (request, response) => {
+          const { name, email, password } = request.body;
+
+          response.json({ name, email, password });
+        }); //Inserindo um método POST para teste - utilizando Insomnia
+
+        module.exports = usersRoutes;
+        ```
+
+        Create the file index.js into routes folder,
+
+        ```JavaScript
+        const { Router } = require("express");
+
+        const usersRouter = require("./users.routes");
+
+        const routes = Router();
+
+        routes.use("/users", usersRouter)
+
+        module.exports = routes;
+        ```
+      };
 
   15. ;
 
