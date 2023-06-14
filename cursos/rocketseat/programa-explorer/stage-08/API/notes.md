@@ -21,7 +21,7 @@
   15. [ ] Learning about controllers;
   16. [ ] Separates the responsibilities of routes and controllers;
   17. [ ] Learning about status code;
-  18. [ ];
+  18. [ ] Learning about middleware;
   19. [ ];
   20. [ ];
 
@@ -196,7 +196,7 @@
       It includes codes from IETF Request for Comments (RFCs), other specifications, and some additional codes used in some common applications of the HTTP.
       The first digit of the status code specifies one of five standard classes of responses. The optional message phrases shown are typical, but any human-readable alternative may be provided, or none at all.
       Unless otherwise stated, the status code is part of the HTTP standard (RFC 9110).
-      The Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.[1]
+      The Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.
       All HTTP response status codes are separated into five classes or categories. The first digit of the status code defines the class of response, while the last two digits do not have any classifying or categorization role. There are five classes defined by the standard:
 
         * 1xx - Informational response – the request was received, continuing process.
@@ -218,7 +218,10 @@
         * 5xx - Server error – the server failed to fulfil an apparently valid request.
           * 500 - Internal server error.
 
-  18. 
+  18. Middleware is a type of computer software that provides services to software applications beyond those available from the operating system. It can be described as "software glue".
+      Middleware makes it easier for software developers to implement communication and input/output, so they can focus on the specific purpose of their application. It gained popularity in the 1980s as a solution to the problem of how to link newer applications to older legacy systems, although the term had been in use since 1968.
+      Middleware are functions that have access to the request object, the response object, and the next middleware function in the request-response cycle of the application.
+      The next middleware function is commonly denoted by a variable called "next".
 
   19. 
 
@@ -350,7 +353,7 @@
       
   17. =/=;
 
-  18. ;
+  18. =/=;
 
   19. ;
 
