@@ -22,7 +22,7 @@
   16. [ ] Separates the responsibilities of routes and controllers;
   17. [ ] Learning about status code;
   18. [ ] Learning about middleware;
-  19. [ ];
+  19. [ ] Putting middleware into practice;
   20. [ ];
 
 
@@ -223,7 +223,7 @@
       Middleware are functions that have access to the request object, the response object, and the next middleware function in the request-response cycle of the application.
       The next middleware function is commonly denoted by a variable called "next".
 
-  19. 
+  19. =/=
 
   20. 
 
@@ -355,6 +355,20 @@
 
   18. =/=;
 
-  19. ;
+  19. ``` JavaScript
+        function myMiddleware(request, response, next) {
+        console.log("Você passou pelo middleware!");
+
+        if (!request.body.isAdmin) return response.json({ message: "user unauthorized" });
+
+        next();
+      }
+      ```
+
+      ``` JavaScript
+        usersRoutes.post("/", myMiddleware, usersController.create);
+      ```
+
+      But only to exemplification. Please delete this code before continuing to step 20.
 
   20. ;
