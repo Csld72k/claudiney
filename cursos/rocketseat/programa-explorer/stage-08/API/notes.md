@@ -20,7 +20,7 @@
   14. [ ] Organize the project structure;
   15. [ ] Learning about controllers;
   16. [ ] Separates the responsibilities of routes and controllers;
-  17. [ ];
+  17. [ ] Learning about status code;
   18. [ ];
   19. [ ];
   20. [ ];
@@ -192,7 +192,31 @@
 
   16. =/=
 
-  17. 
+  17. This is a list of Hypertext Transfer Protocol (HTTP) response status codes. Status codes are issued by a server in response to a client's request made to the server.
+      It includes codes from IETF Request for Comments (RFCs), other specifications, and some additional codes used in some common applications of the HTTP.
+      The first digit of the status code specifies one of five standard classes of responses. The optional message phrases shown are typical, but any human-readable alternative may be provided, or none at all.
+      Unless otherwise stated, the status code is part of the HTTP standard (RFC 9110).
+      The Internet Assigned Numbers Authority (IANA) maintains the official registry of HTTP status codes.[1]
+      All HTTP response status codes are separated into five classes or categories. The first digit of the status code defines the class of response, while the last two digits do not have any classifying or categorization role. There are five classes defined by the standard:
+
+        * 1xx - Informational response – the request was received, continuing process.
+          * 102 - Processing.
+
+        * 2xx - Successful.
+          * 200 - The request was successfully received, understood, and accepted.
+          * 201 - Created - usually used for POST after an insert.
+
+        * 3xx - Redirection – further action needs to be taken in order to complete the request.
+          * 301 - Moved Permanently.
+          * 302 - Moved.
+        
+        * 4xx - Client error – the request contains bad syntax or cannot be fulfilled.
+          * 400 - Bad request.
+          * 401 - Unauthorized.
+          * 404 - Not found.
+          
+        * 5xx - Server error – the server failed to fulfil an apparently valid request.
+          * 500 - Internal server error.
 
   18. 
 
@@ -323,9 +347,8 @@
       }
 
       module.exports = UsersController; // Export the UsersController class
-      ```;
-
-  17. ;
+      
+  17. =/=;
 
   18. ;
 

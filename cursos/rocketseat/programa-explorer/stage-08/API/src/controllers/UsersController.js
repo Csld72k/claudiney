@@ -9,9 +9,9 @@
 
 class UsersController {
   create(request, response) {
-    const { name, email, password } = request.body;
+    const { name, email, password } = request.body; // Cria o usuário
 
-    response.json({ name, email, password });
+    response.status(201).json({ name, email, password }); // Devolve as informações do usuário e o status code
   }
 }
 
