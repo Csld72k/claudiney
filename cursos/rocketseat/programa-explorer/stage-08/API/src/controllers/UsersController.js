@@ -7,9 +7,13 @@
     * delete - DELETE para remover um registro.
   */
 
+const AppError = require("../utils/AppError");
+
 class UsersController {
   create(request, response) {
     const { name, email, password } = request.body; // Cria o usuário
+
+    if (!name) throw new AppError("O nome é obrigatório");
 
     response.status(201).json({ name, email, password }); // Devolve as informações do usuário e o status code
   }

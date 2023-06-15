@@ -24,7 +24,7 @@
   18. [ ] Learning about middleware;
   19. [ ] Putting middleware into practice;
   20. [ ] Create the utils folder and inside it the AppError.js file to handle error handling;
-  21. [ ] ;
+  21. [ ] Install express-async-errors and separate client-side and server-side error handling;
 
 
 # 🕵️ Observations
@@ -228,7 +228,8 @@
 
   20. =/=
 
-  21. 
+  21. Error handling is one of the important subjects in programming. It helps end users to understand what is wrong, and makes your code easier to maintain. I will talk about error handling in Express JS and express-async-errors package helping write cleaner code.
+      Express has its own built-in error handler taking care of any errors can be come accrossed in the app. This default error handling middleware function is added at the end of the middleware function stack to handle the errors. Also, we can create our own error handling middleware function taking extra error parameter compared to other middleware functions in order to handle errors in a way we want. If we want to catch the errors in async functions we need to catch it with next method so that we can pass it in our custom error-handling function. Also, with express-async-errors package we don’t need to catch the error with next method. Thanks to the package, errors automatically passes the error handling function. yhe package help us write cleaner code.
 
 
 # 📝 Notes
@@ -387,4 +388,45 @@
 
       module.exports = AppError;
 
-  21. 
+  21. **--> npm install express-async-errors --save <--**
+
+      In UsersController.js
+      ```JavaScript
+      const AppError = require("../utils/AppError"); // Add this
+
+      class UsersController {
+        create(request, response) {
+          const { name, email, password } = request.body;
+
+          if (!name) throw new AppError("O nome é obrigatório"); // And this too
+
+          response.status(201).json({ name, email, password });
+        }
+      }
+
+      module.exports = UsersController;
+      ```
+
+
+      In server.js
+      ```JavaScript
+      require("express-async-errors"); // Add this on the first line
+
+      const AppError = require("./utils/AppError");
+      app.use((error, request, response, next) => {
+        if (error instanceof AppError) {
+          return response.status(error.statusCode).json({
+            status: "error",
+            message: error.message
+          });
+        }
+
+        console.log(error);
+
+        return response.status(500).json({
+          status: "error",
+          message: "Internal server error"
+        });
+
+      });
+      ```
