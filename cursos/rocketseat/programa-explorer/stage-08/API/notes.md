@@ -25,6 +25,7 @@
   19. [ ] Putting middleware into practice;
   20. [ ] Create the utils folder and inside it the AppError.js file to handle error handling;
   21. [ ] Install express-async-errors and separate client-side and server-side error handling;
+  22. [ ] ;
 
 
 # 🕵️ Observations
@@ -231,6 +232,8 @@
   21. Error handling is one of the important subjects in programming. It helps end users to understand what is wrong, and makes your code easier to maintain. I will talk about error handling in Express JS and express-async-errors package helping write cleaner code.
       Express has its own built-in error handler taking care of any errors can be come accrossed in the app. This default error handling middleware function is added at the end of the middleware function stack to handle the errors. Also, we can create our own error handling middleware function taking extra error parameter compared to other middleware functions in order to handle errors in a way we want. If we want to catch the errors in async functions we need to catch it with next method so that we can pass it in our custom error-handling function. Also, with express-async-errors package we don’t need to catch the error with next method. Thanks to the package, errors automatically passes the error handling function. yhe package help us write cleaner code.
 
+  22. 
+
 
 # 📝 Notes
   01. **--> npm init -y <--**;
@@ -430,3 +433,5 @@
 
       });
       ```
+
+  22. 
