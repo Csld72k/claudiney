@@ -23,7 +23,8 @@
   17. [ ] Learning about status code;
   18. [ ] Learning about middleware;
   19. [ ] Putting middleware into practice;
-  20. [ ];
+  20. [ ] Create the utils folder and inside it the AppError.js file to handle error handling;
+  21. [ ] ;
 
 
 # 🕵️ Observations
@@ -225,7 +226,9 @@
 
   19. =/=
 
-  20. 
+  20. =/=
+
+  21. 
 
 
 # 📝 Notes
@@ -371,4 +374,17 @@
 
       But only to exemplification. Please delete this code before continuing to step 20.
 
-  20. ;
+  20. ``` JavaScript
+      class AppError {
+        message;
+        statusCode;
+
+        constructor(message, statusCode = 400) {
+          this.message = message;
+          this.statusCode = statusCode;
+        }
+      }
+
+      module.exports = AppError;
+
+  21. 
