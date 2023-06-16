@@ -1,28 +1,37 @@
 const knex = require("../dataBase/knex");
-const { stack } = require("../routes");
+// const { stack } = require("../routes");
 const AppError = require("../utils/AppError")
 
 class NotesController {
-  async create(request, response){
-    const {title, description, rating, tags} = request.body;
-    const {user_id} = request.params;
+  async create(request, response) {
+    const { title, description, rating, tags, links } = request.body;
+    const { user_id } = request.params;
 
-    if(Number(rating) > 5 || Number(rating) < 0){
+    if (Number(rating) > 5 || Number(rating) < 0) {
       throw new AppError("please add rating from 0 to 5")
     }
 
-    const note_id = await knex("notes").insert({
+    const [note_id] = await knex("notes").insert({
       title,
       description,
       rating,
       user_id
     });
 
-    if(Number(rating) > 5 || Number(rating) < 0){
+    const linksInsert = links.map(link => {
+      return {
+        note_id,
+        url: link
+      }
+    });
+
+    await knex("links").insert(linksInsert);
+
+    if (Number(rating) > 5 || Number(rating) < 0) {
       throw new AppError("please add rating from 0 to 5")
     }
 
-    let Descriptions = [
+    let Description = [
       "comedia",
       "romance",
       "terror",
@@ -32,11 +41,11 @@ class NotesController {
 
     ]
 
-    Descriptions.map(f => {
-      if(Descriptions != tags){
-        throw new AppError(`please add a description ${Descriptions}`)
-      }
-    }) 
+    // Description.map(f => {
+    //   if (!Description) {
+    //     throw new AppError(`please add a description ${Description}`)
+    //   }
+    // })
 
     const tagsInsert = tags.map(name => {
       return {
@@ -45,23 +54,23 @@ class NotesController {
         user_id
       }
     });
-   
 
-  
+
+
 
     await knex("tags").insert(tagsInsert)
 
     response.json();
   }
 
-  async show(request, response){
+  async show(request, response) {
     const { id } = request.params;
 
     const note = await knex("notes").where({ id }).first();
     const tags = await knex("tags").where({ note_id: id }).orderBy("name")
 
     return response.json({
-      
+
       ...note,
       tags,
 
@@ -69,7 +78,7 @@ class NotesController {
   }
 
 
-  async delete(request, response){
+  async delete(request, response) {
 
     const { id } = request.params;
 
@@ -80,39 +89,39 @@ class NotesController {
 
   }
 
-  async index(request, response){
+  async index(request, response) {
     const { title, user_id, tags } = request.query;
 
     let notes;
 
-    if(tags){
-      const filterTags = tags.split(',').map(tag =>tag.trim());
+    if (tags) {
+      const filterTags = tags.split(',').map(tag => tag.trim());
 
       notes = await knex("tags")
-      .select([
-        "notes.id",
-        "notes.title",
-        "notes.user_id"
-      ])
-      .where("notes.user_id", user_id)
-      .whereLike("notes.title", `%${title}%`)
-      .whereIn("name", filterTags)
-      .innerJoin("notes", "notes.id", "tags.note_id")
-      .orderBy("notes.title")
+        .select([
+          "notes.id",
+          "notes.title",
+          "notes.user_id"
+        ])
+        .where("notes.user_id", user_id)
+        .whereLike("notes.title", `%${title}%`)
+        .whereIn("name", filterTags)
+        .innerJoin("notes", "notes.id", "tags.note_id")
+        .orderBy("notes.title")
 
-    }else{
+    } else {
       notes = await knex("notes")
-      .where({ user_id })
-      .whereLike("title", `%${title}%`)
-      .orderBy("title")
+        .where({ user_id })
+        .whereLike("title", `%${title}%`)
+        .orderBy("title")
     }
 
     const userTags = await knex("tags").where({ user_id });
     const noteWithTags = notes.map(note => {
       const noteTags = userTags.filter(tag => tag.note_id === note.id)
 
-      return{
-        ...note, 
+      return {
+        ...note,
         tags: noteTags
       }
 

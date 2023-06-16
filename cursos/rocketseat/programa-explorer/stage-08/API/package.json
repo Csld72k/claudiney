@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/sever.js",
-    "dev": "nodemon ./src/sever.js",
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js",
     "migrate": "knex migrate:latest"
   },
   "author": "Claudiney Silva",
@@ -19,6 +19,6 @@
     "sqlite3": "^5.0.10"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.22"
   }
 }

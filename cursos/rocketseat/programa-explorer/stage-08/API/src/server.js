@@ -3,7 +3,7 @@ const AppError = require("./utils/AppError")
 
 const port = 3333;
 
-const router = require("./routes") 
+const router = require("./routes")
 
 const migrationsRun = require("./dataBase/sqlite/migrations")
 migrationsRun();
@@ -13,9 +13,9 @@ const app = express();
 app.use(express.json())
 app.use(router);
 
-app.use(( error, request, response, next ) => {
+app.use((error, request, response, next) => {
 
-  if(error instanceof AppError){
+  if (error instanceof AppError) {
     return response.status(error.statusCode).json({
       status: "error",
       message: error.message
@@ -26,8 +26,8 @@ app.use(( error, request, response, next ) => {
 
   return response.status(500).json({
     status: "error",
-    message: "internal sever error"
+    message: "internal server error"
   });
 })
 
-app.listen(port, () => console.log(`sever running on port ${port}`));
+app.listen(port, () => console.log(`server running on port ${port}`));
