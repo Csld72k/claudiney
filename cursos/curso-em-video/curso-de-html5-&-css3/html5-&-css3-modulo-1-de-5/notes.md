@@ -53,3 +53,17 @@ This text will go right-to-left.
 BDO stands for Bi-Directional Override. The &lt;bdo&gt; tag is used to override the current text direction.
 <hr>
 
+* The &lt;picture&gt; tag gives web developers more flexibility in specifying image resources.
+
+The most common use of the &lt;picture&gt; element will be for art direction in responsive designs. Instead of having one image that is scaled up or down based on the viewport width, multiple images can be designed to more nicely fill the browser viewport.
+
+The &lt;picture&gt; element contains two tags: one or more &lt;source&gt; tags and one &lt;img&gt; tag.
+
+The browser will look for the first &lt;source&gt; element where the media query matches the current viewport width, and then it will display the proper image (specified in the srcset attribute). The &lt;img&gt; element is required as the last child of the &lt;picture&gt; element, as a fallback option if none of the source tags matches.
+
+Tip: The &lt;picture&gt; element works "similar" to &lt;video&gt; and &lt;audio&gt;. You set up different sources, and the first source that fits the preferences is the one being used.
+<hr>
+
+* The &lt;source&gt; tag is used to specify multiple media resources for media elements, such as &lt;video&gt;, &lt;audio&gt;, and &lt;picture&gt;.
+
+The &lt;source&gt; tag allows you to specify alternative video/audio/image files which the browser may choose from, based on browser support or viewport width. The browser will choose the first &lt;source&gt; it supports.
