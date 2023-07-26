@@ -67,3 +67,15 @@ Tip: The &lt;picture&gt; element works "similar" to &lt;video&gt; and &lt;audio&
 * The &lt;source&gt; tag is used to specify multiple media resources for media elements, such as &lt;video&gt;, &lt;audio&gt;, and &lt;picture&gt;.
 
 The &lt;source&gt; tag allows you to specify alternative video/audio/image files which the browser may choose from, based on browser support or viewport width. The browser will choose the first &lt;source&gt; it supports.
+<hr>
+
+* The &lt;audio&gt; tag is used to embed sound content in a document, such as music or other audio streams.
+
+The &lt;audio&gt; tag contains one or more &lt;source&gt; tags with different audio sources. The browser will choose the first source it supports.
+
+The text between the &lt;audio&gt; and &lt;/audi&gt;> tags will only be displayed in browsers that do not support the &lt;audio&gt; element.
+
+There are three supported audio formats in HTML: MP3, WAV, and OGG.
+
+![Alt text](image-1.png)
+<hr>
