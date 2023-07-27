@@ -79,3 +79,14 @@ There are three supported audio formats in HTML: MP3, WAV, and OGG.
 
 ![Alt text](image-1.png)
 <hr>
+
+* he &lt;video&gt; tag is used to embed video content in a document, such as a movie clip or other video streams.
+
+The &lt;video&gt; tag contains one or more &lt;source&gt; tags with different video sources. The browser will choose the first source it supports.
+
+The text between the &lt;video&gt; and &lt;/&gt;ideo> tags will only be displayed in browsers that do not support the &lt;video&gt; element.
+
+There are three supported video formats in HTML: MP4, WebM, and OGG.
+
+![Alt text](image-2.png)
+<hr>
