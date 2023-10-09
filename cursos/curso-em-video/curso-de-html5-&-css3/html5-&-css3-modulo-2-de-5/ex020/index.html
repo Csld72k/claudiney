@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- IDs identify elements on the page. It is not allowed for two elements to have the same ID in the same HTML document, stay tuned! -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identification in CSS</title>
+  <style>
+    div {
+      display: inline-block;
+      /* displays a div next to the other, inline */
+      width: 200px;
+      /* block width */
+      height: 200px;
+      /* block height */
+      background-color: lightgray;
+      border: 1px solid black;
+      /* block border */
+    }
+
+    div#area01 {
+      /* unique settings for element with id "area01" */
+      background-color: darkred;
+    }
+
+    #area02 {
+      /* it is not necessary to put the name of the tag, just the ID */
+      background-color: darkolivegreen;
+    }
+
+    div#area03,
+    div#area05 {
+      /* we can assign properties to more than one element */
+      background-color: darkblue;
+    }
+
+    /* "area04" did not have any special configuration, so it will be displayed as a regular div (gray) */
+  </style>
+</head>
+
+<body>
+  <h1>Identification in CSS</h1>
+  <p>In the previous exercise, we saw the <mark>classes</mark> and understood that several elements can have the same
+    class.
+    But if we want to <mark>identify</mark> the elements, giving a specific "name" to each one, we can use the
+    IDs. In the same document, <strong>we cannot have two elements with the same ID!</strong></p>
+
+  <div id="area01"></div>
+  <div id="area02"></div>
+  <div id="area03"></div>
+  <div id="area04"></div>
+  <div id="area05"></div>
+
+</body>
+
+</html>

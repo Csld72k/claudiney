@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- For CSS, a CLASS is like a "category", where all objects belonging to that class will have the same properties. For CSS, every class is represented by a dot (.)
+
+     Several objects can belong to the same class, keep that in your heart <3
+-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Classes</title>
+  <style>
+    body {
+      font: 12pt Arial;
+    }
+
+    p {
+      /* by default, all paragraphs on this site will be justified */
+      text-align: justify;
+      text-indent: 20pt;
+      /* all will have that indentation that every paragraph has at the beginning */
+    }
+
+    p.meio {
+      /* except for those with the "middle" class, which will be centralized */
+      text-align: center;
+    }
+
+    p.dir {
+      /* those with the class "dir", will be on the right */
+      text-align: left;
+    }
+
+    p.especial {
+      /* and those of the "special" class will have a special background color */
+      background-color: rgba(242, 255, 0, 0.468);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Classes</h1>
+  <p>To avoid the stress of the last exercise, where I had to keep inventing texts, I'm going to take a text that was
+    copied from a news site &#x1F605;.</p>
+
+  <h2>Amazon launches its own Linux distribution</h2>
+
+  <p>
+    The commerce giant Amazon surprises once again and launches its own Linux distribution. the new system
+    open source operating system is called Bottlerocket. However, very calm at this time. Before getting excited about
+    distro and try to install it, you need to know that it doesn't work the same way as other 'normal' ones like
+    Ubuntu, Debian or Fedora.
+  </p>
+
+  <h3>Meet Bottlerocket: Amazon's Linux Distribution for Running Containers</h3>
+
+  <p class="dir">
+    A lot has changed in the IT industry since the term cloud computing was first coined. It takes a few
+    seconds to deploy a Linux server (usually running in a VM), thanks to server providers in
+    cloud like Amazon AWS, Google, Linode, Digital Ocean etc. In addition, you can deploy applications and services
+    on these servers in the form of containers thanks to tools like Docker and Kubernetes.
+  </p>
+
+  <p>
+    The problem is, when your only goal is to run containers on a Linux system, you don't always need a
+    Complete Linux distribution. That's why there are container-specific systems that only provide the
+    required packages. This dramatically reduces operating system size and deployment time. O
+    Bottlerocket Linux is specifically developed by Amazon Web Services to run containers on machines
+    virtual or bare metal hosts. It supports docker images as well as others that follow the OCI image format.
+  </p>
+
+  <h3>
+    Features of Bottlerocket Linux
+  </h3>
+
+  <p class="especial">
+    No package-by-package updates. The traditional procedure of a Linux distribution is composed by
+    updating individual packages. Bottlerocket uses image-based updates. Thanks to this approach,
+    conflicts and crashes are avoided with the possibility of a quick and complete rollback (if necessary). System of
+    read-only files. Bottlerocket also uses a read-only file system. your integrity is
+    checked at boot time via dm-verity. For additional security measures, SSH access is also
+    discouraged and only available through the admin container (additional mechanism).
+  </p>
+
+  <h3>
+    Automated Updates
+  </h3>
+
+  <p class="meio especial"> <!-- This paragraph will have two classes: middle AND special -->
+    You can automate Bottlerocket updates using an orchestration service like Amazon EKS. to amazon
+    also claims that including only the essential software to run containers reduces the number of attacks on
+    compared to general-purpose Linux distributions.
+  </p>
+
+  <h3>
+    What do you think?
+  </h3>
+
+  <p class="esq"> <!-- It's okay for two paragraphs to be of the same class -->
+    Amazon is not the first to create a 'container-specific Linux'. CoreOS was one of the first
+    such distributions. CoreOS was acquired by Red Hat, which was then sold to IBM. Red Hat recently
+    discontinued CoreOS and replaced it with Fedora CoreOS. Cloud server is a big industry that will continue to
+    to grow. A giant like Amazon will do anything to stay abreast or ahead of its competitors. In my opinion,
+    Bottlerocket is an answer to (now) IBM's Fedora CoreOS. Although Bottlerocket repositories are
+    available on GitHub , it is still not possible to find one ready to create images. It is currently available
+    just as a preview on AWS.
+  </p>
+</body>
+
+</html>

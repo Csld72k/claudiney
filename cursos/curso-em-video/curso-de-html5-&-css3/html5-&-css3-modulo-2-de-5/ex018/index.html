@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonts in CSS</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+    @font-face {
+      font-family: 'Minha Fonte';
+      src: url('littlebird.ttf');
+    }
+
+    body {
+      font-size: 15pt;
+    }
+
+    h2 {
+      font-weight: normal;
+      /* serves to remove the bold of the headings */
+    }
+
+    h2#padrao {
+      font-family: Arial, Helvetica, sans-serif;
+      /* The browser will try to load the first one, if it doesn't work, move on to the next one */
+    }
+
+    h2#google {
+      font-family: 'Pacifico', cursive;
+      /* The import of this font happened on line 8 */
+    }
+
+    h2#local {
+      font-family: 'Minha Fonte', sans-serif;
+      /* Imported local font from line 9 to 12 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Fonts in CSS</h1>
+  <h2 id="padrao">We can configure system default fonts.</h2>
+  <h2 id="google">Or use a font from Google Fonts.</h2>
+  <h2 id="local">Or even use a local font file.</h2>
+</body>
+
+</html>
