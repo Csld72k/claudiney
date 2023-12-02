@@ -117,6 +117,8 @@ main h1 {
   object-fit: cover;
 
   transition: all .2s ease-out;
+
+  display: block;
 }
 
 .item img:hover {
@@ -155,4 +157,57 @@ footer p {
   font-weight: 600;
 }
 
+header {
+  --startY: -100%;
+  animation: move .2s;
+}
 
+footer {
+  --startY: 100%;
+  animation: move .2s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY))
+  }
+}
+
+.item {
+  animation: appear .4s var(--delay) backwards;
+}
+
+.item:nth-child(1) {
+  --delay: .4s;
+}
+
+.item:nth-child(2) {
+  --delay: .6s;
+}
+
+.item:nth-child(3) {
+  --delay: .8s;
+}
+
+.item:nth-child(4) {
+  --delay: 1s;
+}
+
+.item:nth-child(5) {
+  --delay: 1.2s;
+}
+
+.item:nth-child(6) {
+  --delay: 1.4s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
